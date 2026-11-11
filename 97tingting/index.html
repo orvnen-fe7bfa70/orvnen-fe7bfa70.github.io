@@ -1,0 +1,1050 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>97婷婷在线网址 - 影视剧集聚合索引与追剧导航</title>
+<meta name="description" content="97婷婷在线网址聚合华语剧集、短剧、港台剧与海外剧条目索引，提供分集更新时间线、平台播出对照、评分口碑与追剧清单，适合按类型挑剧、按更新节奏追更的观众查阅。">
+<meta name="keywords" content="97婷婷在线网址">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c2b4a'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23f0b429' stroke-width='4'/%3E%3Cpath d='M27 24l16 8-16 8z' fill='%23f0b429'/%3E%3C/svg%3E">
+<style>
+:root{
+  --brand:#1c2b4a;
+  --brand-mid:#2f4470;
+  --brand-light:#e8edf7;
+  --accent:#d9482f;
+  --accent-soft:#fdece8;
+  --gold:#c8912a;
+  --bg:#f6f7fa;
+  --panel:#ffffff;
+  --ink-1:#1a1f2b;
+  --ink-2:#4b5468;
+  --ink-3:#7c8497;
+  --line:#e2e6ef;
+  --radius-card:12px;
+  --radius-btn:8px;
+  --radius-tag:4px;
+  --radius-banner:16px;
+  --shadow-1:0 1px 2px rgba(26,31,43,.06),0 2px 8px rgba(26,31,43,.05);
+  --shadow-2:0 4px 14px rgba(26,31,43,.10),0 2px 4px rgba(26,31,43,.06);
+  --sticky-h:104px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--sticky-h) + 12px)}
+body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink-1);line-height:1.72;font-size:15.5px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 .8em}
+ul,ol{margin:0 0 .8em;padding-left:1.3em}
+li{margin-bottom:.35em}
+button{font-family:inherit}
+
+/* ---------- 吸顶公告 + 页头 ---------- */
+.sticky-wrap{position:sticky;top:0;z-index:80}
+.notice-bar{background:var(--brand);color:#e9eefb;font-size:13px;line-height:1.5}
+.notice-inner{max-width:1360px;margin:0 auto;padding:7px 20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.notice-brand{font-weight:700;color:#fff;letter-spacing:.5px;flex:0 0 auto}
+.notice-brand span{color:var(--gold)}
+.notice-items{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:#c6d1e8}
+.notice-items b{color:var(--gold);font-weight:600}
+.site-header{background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:var(--shadow-1)}
+.header-inner{max-width:1360px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:22px}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand svg{width:36px;height:36px;flex:0 0 auto}
+.brand-text{font-size:19px;font-weight:800;letter-spacing:.4px;color:var(--brand);white-space:nowrap}
+.main-nav{display:flex;gap:4px;flex-wrap:wrap;flex:1 1 auto}
+.main-nav a{padding:6px 11px;border-radius:var(--radius-btn);font-size:14px;color:var(--ink-2);transition:background .18s,color .18s}
+.main-nav a:hover,.main-nav a:focus-visible{background:var(--brand-light);color:var(--brand);outline:none}
+.header-actions{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.search-box{display:flex;align-items:center;border:1px solid var(--line);border-radius:var(--radius-btn);background:#fbfcfe;overflow:hidden}
+.search-box input{border:0;background:transparent;padding:7px 10px;font-size:13.5px;width:150px;color:var(--ink-1);outline:none}
+.search-box button{border:0;background:var(--brand);color:#fff;padding:7px 12px;font-size:13px;cursor:pointer}
+.search-box button:hover{background:var(--brand-mid)}
+.btn-primary{background:var(--accent);color:#fff;padding:8px 15px;border-radius:var(--radius-btn);font-size:13.5px;font-weight:600;border:0;cursor:pointer;transition:background .18s}
+.btn-primary:hover{background:#bf3b24}
+.hamburger{display:none;background:var(--brand-light);border:0;border-radius:var(--radius-btn);padding:8px 10px;cursor:pointer;color:var(--brand);font-size:17px;line-height:1}
+.mask{display:none;position:fixed;inset:0;background:rgba(20,26,40,.45);z-index:90}
+.mask.on{display:block}
+
+/* ---------- 首屏 ---------- */
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#16213a 0%,#22345a 52%,#2f4470 100%);color:#fff}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(240,180,41,.28),transparent 62%);pointer-events:none}
+.hero-inner{max-width:1360px;margin:0 auto;padding:52px 20px 46px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:38px;align-items:center;position:relative;z-index:1}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.22);padding:5px 12px;border-radius:100px;font-size:12.5px;letter-spacing:.4px;margin-bottom:16px}
+.hero-tag i{width:6px;height:6px;border-radius:50%;background:var(--gold);display:inline-block;animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{font-size:clamp(28px,3.6vw,44px);letter-spacing:.5px;margin-bottom:16px}
+.hero-desc{font-size:15.5px;color:#cfd9ee;max-width:560px;line-height:1.8}
+.hero-desc strong{color:#fff;font-weight:600}
+.hero-entries{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.hero-entries a{padding:9px 18px;border-radius:var(--radius-btn);font-size:14px;font-weight:600;transition:transform .18s,background .18s}
+.hero-entries a:hover{transform:translateY(-2px)}
+.entry-main{background:var(--gold);color:#1a1f2b}
+.entry-sub{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff}
+.hero-stats{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap}
+.hero-stats div{font-size:12.5px;color:#a9b8d6}
+.hero-stats b{display:block;font-size:22px;color:#fff;font-weight:800;letter-spacing:.5px}
+.hero-visual{position:relative;min-height:280px}
+.hero-visual svg{width:100%;height:auto;display:block}
+
+/* ---------- 布局：三栏门户 ---------- */
+.layout{max-width:1360px;margin:0 auto;padding:30px 20px 10px;display:grid;grid-template-columns:176px minmax(0,1fr) 248px;gap:26px;align-items:start}
+.channel-col{position:sticky;top:calc(var(--sticky-h) + 14px);background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:14px 12px;box-shadow:var(--shadow-1)}
+.channel-col h3{font-size:13px;color:var(--ink-3);letter-spacing:1px;font-weight:600;margin-bottom:10px;padding-left:6px}
+.channel-col a{display:block;padding:7px 9px;border-radius:6px;font-size:14px;color:var(--ink-2);border-left:2px solid transparent;transition:all .16s}
+.channel-col a:hover,.channel-col a:focus-visible{background:var(--brand-light);color:var(--brand);border-left-color:var(--accent);outline:none}
+.channel-col a.active{background:var(--brand-light);color:var(--brand);border-left-color:var(--accent);font-weight:600}
+.main-col{min-width:0}
+.aside-col{position:sticky;top:calc(var(--sticky-h) + 14px);display:flex;flex-direction:column;gap:18px}
+
+/* ---------- 通用板块 ---------- */
+.section{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:24px 24px 20px;margin-bottom:26px;box-shadow:var(--shadow-1)}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:16px;flex-wrap:wrap}
+.section-head h2{font-size:20px;letter-spacing:.3px;color:var(--brand)}
+.section-head h2::before{content:"";display:inline-block;width:4px;height:17px;background:var(--accent);border-radius:2px;margin-right:9px;vertical-align:-2px}
+.section-head .link-more{font-size:13px;color:var(--ink-3)}
+.section-head .link-more:hover{color:var(--accent)}
+.lead{font-size:14px;color:var(--ink-2);margin-bottom:18px}
+
+/* 概览 */
+.overview p{font-size:14.8px;color:#333c4f;text-align:justify}
+.overview .kw-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.kw-chips span{background:var(--brand-light);color:var(--brand);font-size:12.5px;padding:4px 10px;border-radius:100px}
+
+/* 精选卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:16px}
+.card{border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden;background:#fff;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s;min-width:0}
+.card:hover{box-shadow:var(--shadow-2);transform:translateY(-3px)}
+.card img{width:100%;height:150px;object-fit:cover;background:var(--brand-light)}
+.card-body{padding:12px 13px 14px;display:flex;flex-direction:column;gap:7px;flex:1}
+.card-body h3{font-size:15px;line-height:1.45}
+.card-body h3 a:hover{color:var(--accent)}
+.type-tag{align-self:flex-start;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:var(--radius-tag);background:var(--accent-soft);color:var(--accent)}
+.type-tag.blue{background:var(--brand-light);color:var(--brand)}
+.type-tag.gold{background:#fdf4e0;color:#a5761b}
+.card-desc{font-size:13px;color:var(--ink-2);line-height:1.62;flex:1}
+.card-meta{display:flex;gap:10px;font-size:11.8px;color:var(--ink-3);border-top:1px dashed var(--line);padding-top:7px}
+.card-meta b{color:var(--accent);font-weight:700}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tags span{font-size:11.5px;color:var(--ink-3);background:#f2f4f9;padding:2px 7px;border-radius:var(--radius-tag)}
+
+/* 更新列表 */
+.update-list{list-style:none;padding:0;margin:0}
+.update-list li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px dashed var(--line);margin:0}
+.update-list li:last-child{border-bottom:0;padding-bottom:0}
+.update-date{font-size:12px;color:var(--ink-3);padding-top:2px;font-variant-numeric:tabular-nums}
+.update-main b{display:block;font-size:14.5px;margin-bottom:3px}
+.update-main span{font-size:13px;color:var(--ink-2);line-height:1.6;display:block}
+.update-main em{font-style:normal;font-size:11.5px;color:var(--brand);background:var(--brand-light);padding:1px 7px;border-radius:var(--radius-tag);margin-left:6px}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.cat-item{border:1px solid var(--line);border-radius:var(--radius-btn);padding:11px 13px;background:#fbfcfe;transition:all .18s;display:block}
+.cat-item:hover{border-color:var(--brand);background:var(--brand-light)}
+.cat-item b{display:block;font-size:14px;color:var(--brand);margin-bottom:2px}
+.cat-item span{font-size:12px;color:var(--ink-3)}
+
+/* 深度解析 */
+.deep h3{font-size:16.5px;margin:22px 0 9px;color:var(--brand);padding-left:10px;border-left:3px solid var(--gold)}
+.deep h3:first-of-type{margin-top:4px}
+.deep p,.deep li{font-size:14.6px;color:#333c4f;text-align:justify}
+.deep ul{padding-left:1.25em}
+.compare-table{width:100%;border-collapse:collapse;font-size:13.4px;margin:12px 0 16px;background:#fbfcfe}
+.compare-table th,.compare-table td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.compare-table th{background:var(--brand-light);color:var(--brand);font-weight:600;white-space:nowrap}
+.callout{background:#fdf9ef;border:1px solid #efe0bd;border-left:3px solid var(--gold);padding:12px 14px;border-radius:var(--radius-btn);font-size:13.6px;color:#5b4a24;margin:14px 0}
+.callout b{color:#8a6415}
+
+/* 指南步骤 */
+.steps{counter-reset:step;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{counter-increment:step;position:relative;padding:13px 15px 13px 52px;border:1px solid var(--line);border-radius:var(--radius-btn);background:#fbfcfe;font-size:14px;color:#333c4f}
+.steps li::before{content:counter(step);position:absolute;left:14px;top:13px;width:25px;height:25px;border-radius:50%;background:var(--brand);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.steps li b{color:var(--brand)}
+
+/* FAQ */
+.faq details{border:1px solid var(--line);border-radius:var(--radius-btn);margin-bottom:9px;background:#fbfcfe;overflow:hidden}
+.faq details[open]{border-color:var(--brand-mid);background:#fff}
+.faq summary{cursor:pointer;padding:12px 15px;font-size:14.3px;font-weight:600;color:var(--brand);list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:17px;color:var(--ink-3);font-weight:400;flex:0 0 auto}
+.faq details[open] summary::after{content:"−"}
+.faq summary:hover{background:var(--brand-light)}
+.faq .faq-a{padding:0 15px 14px;font-size:13.8px;color:#3c4557;line-height:1.72}
+
+/* 评论 */
+.comment-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:12px}
+.comment{border:1px solid var(--line);border-radius:var(--radius-btn);padding:11px 13px;background:#fbfcfe}
+.comment-head{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.avatar{width:26px;height:26px;border-radius:50%;background:var(--brand-mid);color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;font-weight:700;flex:0 0 auto}
+.comment-head b{font-size:13px;color:var(--brand)}
+.comment-head em{font-style:normal;font-size:11.5px;color:var(--ink-3);margin-left:auto}
+.comment p{font-size:13.3px;color:#3c4557;margin:0;line-height:1.66}
+
+/* 资讯 */
+.news-list{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.news-list li{padding:11px 0;border-bottom:1px dashed var(--line)}
+.news-list li:last-child{border-bottom:0}
+.news-title{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.news-title a{font-size:14.6px;font-weight:600;color:var(--ink-1)}
+.news-title a:hover{color:var(--accent)}
+.news-title time{font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.news-list p{font-size:13.2px;color:var(--ink-2);margin:4px 0 0}
+
+/* 相关推荐标签 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:9px}
+.rec-tags a{font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:100px;color:var(--ink-2);background:#fbfcfe;transition:all .18s}
+.rec-tags a:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+
+/* 榜单 */
+.rank-list{list-style:none;padding:0;margin:0;counter-reset:rk}
+.rank-list li{counter-increment:rk;display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:10px;align-items:center;padding:9px 0;border-bottom:1px dashed var(--line);font-size:13.8px}
+.rank-list li:last-child{border-bottom:0}
+.rank-list li::before{content:counter(rk);font-weight:800;color:var(--ink-3);font-size:14px;text-align:center}
+.rank-list li:nth-child(-n+3)::before{color:var(--accent)}
+.rank-list b{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rank-list span{font-size:12px;color:var(--ink-3);white-space:nowrap}
+
+/* 侧栏组件 */
+.aside-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:15px 15px 13px;box-shadow:var(--shadow-1)}
+.aside-card h3{font-size:14px;color:var(--brand);margin-bottom:11px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.aside-card ul{list-style:none;padding:0;margin:0}
+.aside-card li{font-size:13px;padding:6px 0;display:flex;gap:8px;line-height:1.55;color:var(--ink-2)}
+.aside-card li i{font-style:normal;color:var(--accent);font-weight:700;flex:0 0 auto;font-size:12px}
+.mini-rank li{justify-content:space-between;align-items:baseline}
+.mini-rank li b{font-weight:500;color:var(--ink-1);font-size:13px}
+.mini-rank li span{font-size:11.5px;color:var(--ink-3);flex:0 0 auto}
+
+/* 投稿 / 互动板块 */
+.submit-panel{background:linear-gradient(140deg,#1c2b4a,#2f4470);color:#fff;border-radius:var(--radius-banner);padding:26px 26px 22px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);gap:22px;align-items:center}
+.submit-panel h2{font-size:19px;margin-bottom:8px}
+.submit-panel p{font-size:13.6px;color:#c6d1e8;margin-bottom:0}
+.submit-panel .btn-primary{margin-top:0}
+.submit-actions{display:flex;flex-direction:column;gap:9px}
+.btn-ghost{display:block;text-align:center;padding:8px 14px;border:1px solid rgba(255,255,255,.4);border-radius:var(--radius-btn);color:#fff;font-size:13.5px;transition:background .18s}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+.no-result{display:none;padding:16px;border:1px dashed var(--line);border-radius:var(--radius-btn);color:var(--ink-3);font-size:13.5px;text-align:center;background:#fbfcfe}
+.no-result.on{display:block}
+.hidden{display:none !important}
+
+/* 页脚 */
+.site-footer{background:#141d30;color:#a9b8d6;margin-top:20px;padding:40px 20px 22px}
+.footer-inner{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,.6fr));gap:28px}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.footer-brand svg{width:32px;height:32px}
+.footer-brand b{font-size:17px;color:#fff;letter-spacing:.4px}
+.footer-desc{font-size:13px;line-height:1.78;color:#8fa0c0;max-width:340px}
+.footer-col h4{font-size:13.5px;color:#fff;margin-bottom:10px;letter-spacing:.5px}
+.footer-col a{display:block;font-size:12.8px;color:#8fa0c0;padding:3px 0;transition:color .16s}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{max-width:1360px;margin:26px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:#6f7f9e;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+/* 回到顶部 */
+.to-top{position:fixed;right:20px;bottom:24px;width:42px;height:42px;border-radius:50%;background:var(--brand);color:#fff;border:0;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:17px;box-shadow:var(--shadow-2);z-index:70;transition:background .18s}
+.to-top:hover{background:var(--accent)}
+.to-top.on{display:flex}
+
+/* 响应式 */
+@media (max-width:1100px){
+  .layout{grid-template-columns:minmax(0,1fr) 250px;gap:22px}
+  .channel-col{position:static;grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px;padding:12px}
+  .channel-col h3{width:100%;margin-bottom:4px}
+  .channel-col a{flex:0 0 auto;border-left:0;border:1px solid var(--line);font-size:13px;padding:5px 10px;border-radius:100px}
+  .channel-col a.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+  .hero-inner{grid-template-columns:1fr;gap:24px}
+  .hero-visual{max-width:460px}
+}
+@media (max-width:1024px){
+  .main-nav{display:none}
+  .main-nav.open{display:flex;position:fixed;top:calc(var(--sticky-h) + 0px);left:0;right:0;background:#fff;z-index:95;padding:14px 18px;box-shadow:var(--shadow-2);border-bottom:1px solid var(--line);flex-direction:column;gap:2px;max-height:70vh;overflow:auto}
+  .main-nav.open a{padding:10px 12px;font-size:15px;border-radius:var(--radius-btn)}
+  .hamburger{display:inline-flex}
+  .header-inner{gap:12px}
+  .search-box input{width:110px}
+}
+@media (max-width:860px){
+  .layout{grid-template-columns:1fr}
+  .aside-col{position:static;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .submit-panel{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media (max-width:740px){
+  :root{--sticky-h:96px}
+  .notice-items{font-size:11.8px;gap:12px}
+  .header-inner{padding:10px 14px;gap:10px}
+  .brand-text{font-size:16.5px}
+  .brand svg{width:30px;height:30px}
+  .search-box input{width:88px;font-size:12.5px}
+  .btn-primary{padding:7px 11px;font-size:12.5px}
+  .hero-inner{padding:34px 16px 30px}
+  .hero h1{font-size:27px}
+  .hero-stats{gap:18px}
+  .hero-stats b{font-size:18px}
+  .layout{padding:20px 14px 6px}
+  .section{padding:18px 15px 16px;margin-bottom:18px}
+  .section-head h2{font-size:17.5px}
+  .card-grid{grid-template-columns:1fr}
+  .card img{height:170px}
+  .comment-list{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr}
+  .to-top{right:14px;bottom:16px;width:38px;height:38px}
+  .update-list li{grid-template-columns:1fr;gap:3px}
+  .update-date{font-size:11.5px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div class="notice-bar">
+    <div class="notice-inner">
+      <div class="notice-brand">97婷婷<span>在线网址</span> · 条目速报</div>
+      <div class="notice-items">
+        <span><b>11月7日</b>《雾港长夜》第14集上线，主线反转点落在第37分钟</span>
+        <span><b>11月6日</b>短剧《记账本里的春天》全24集完结，可一次看完</span>
+        <span><b>本周</b>新增港剧条目 9 部，台剧 6 部</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="97婷婷在线网址首页">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#1c2b4a"/>
+          <circle cx="32" cy="32" r="17" fill="none" stroke="#f0b429" stroke-width="4"/>
+          <path d="M27 24l16 8-16 8z" fill="#f0b429"/>
+        </svg>
+        <span class="brand-text">97婷婷在线网址</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <a href="#overview">领域概览</a>
+        <a href="#picks">剧集精选</a>
+        <a href="#updates">更新速递</a>
+        <a href="#cats">分类索引</a>
+        <a href="#deep">深度解析</a>
+        <a href="#guide">追剧路径</a>
+        <a href="#faq">常见问答</a>
+        <a href="#comments">观众评论</a>
+        <a href="#news">剧集资讯</a>
+        <a href="#rank">口碑榜单</a>
+        <a href="#recs">相关推荐</a>
+        <a href="#submit">投稿互动</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="search" id="siteSearch" placeholder="搜剧名 / 类型" aria-label="站内条目搜索">
+          <button type="button" id="searchBtn">查找</button>
+        </div>
+        <button class="btn-primary" type="button" id="submitJump">投剧集</button>
+        <button class="hamburger" type="button" id="hamburger" aria-label="打开导航菜单" aria-expanded="false" aria-controls="mainNav">☰</button>
+      </div>
+    </div>
+  </header>
+</div>
+<div class="mask" id="mask"></div>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="hero-inner">
+      <div>
+        <span class="hero-tag"><i></i>2026 年 11 月 8 日 · 剧集更新与口碑索引</span>
+        <h1 id="heroTitle">97婷婷在线网址</h1>
+        <p class="hero-desc">汇总华语长剧、竖屏短剧、港台剧与日韩欧美剧的条目信息：<strong>谁在播、播到第几集、哪天更新、平台评分多少</strong>。按类型、地区、更新节奏三条线拆开排列，找剧不必再翻十几个平台页面。</p>
+        <div class="hero-entries">
+          <a class="entry-main" href="#picks">查看本周精选 9 部</a>
+          <a class="entry-sub" href="#updates">今日更新 12 条</a>
+          <a class="entry-sub" href="#rank">口碑榜单 TOP10</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>1,860</b>收录剧集条目</div>
+          <div><b>12</b>频道分类</div>
+          <div><b>11-08</b>最近更新日期</div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 460 320" role="presentation">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f0b429" stop-opacity=".95"/>
+              <stop offset="1" stop-color="#d9482f" stop-opacity=".85"/>
+            </linearGradient>
+          </defs>
+          <rect x="26" y="34" width="300" height="196" rx="12" fill="#243657" stroke="#3c5480"/>
+          <rect x="40" y="48" width="272" height="140" rx="6" fill="#16213a"/>
+          <circle cx="176" cy="118" r="27" fill="none" stroke="url(#g1)" stroke-width="3"/>
+          <path d="M166 105l26 13-26 13z" fill="#f0b429"/>
+          <rect x="40" y="198" width="120" height="8" rx="4" fill="#3c5480"/>
+          <rect x="40" y="212" width="72" height="8" rx="4" fill="#2f4470"/>
+          <g>
+            <rect x="248" y="128" width="182" height="58" rx="9" fill="#ffffff" opacity=".96"/>
+            <rect x="262" y="142" width="58" height="30" rx="5" fill="#e8edf7"/>
+            <rect x="330" y="146" width="86" height="7" rx="3.5" fill="#c9d3e6"/>
+            <rect x="330" y="160" width="60" height="7" rx="3.5" fill="#dde4f0"/>
+          </g>
+          <g>
+            <rect x="248" y="200" width="182" height="58" rx="9" fill="#ffffff" opacity=".88"/>
+            <rect x="262" y="214" width="58" height="30" rx="5" fill="#fdece8"/>
+            <rect x="330" y="218" width="72" height="7" rx="3.5" fill="#c9d3e6"/>
+            <rect x="330" y="232" width="48" height="7" rx="3.5" fill="#dde4f0"/>
+          </g>
+          <circle cx="392" cy="70" r="30" fill="none" stroke="#f0b429" stroke-width="2" stroke-dasharray="4 6"/>
+          <circle cx="392" cy="70" r="11" fill="url(#g1)"/>
+          <rect x="26" y="252" width="404" height="2" fill="#3c5480"/>
+          <path d="M26 272h404" stroke="#2f4470" stroke-width="1"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="layout">
+
+    <aside class="channel-col" aria-label="频道索引">
+      <h3>频道索引</h3>
+      <a href="#overview">领域概览</a>
+      <a href="#picks">剧集精选</a>
+      <a href="#updates">更新速递</a>
+      <a href="#cats">分类索引</a>
+      <a href="#deep">深度解析</a>
+      <a href="#guide">追剧路径</a>
+      <a href="#faq">常见问答</a>
+      <a href="#comments">观众评论</a>
+      <a href="#news">剧集资讯</a>
+      <a href="#rank">口碑榜单</a>
+      <a href="#recs">相关推荐</a>
+      <a href="#submit">投稿互动</a>
+    </aside>
+
+    <div class="main-col">
+
+      <!-- 1 领域概览 -->
+      <section class="section overview" id="overview">
+        <div class="section-head">
+          <h2>华语剧集与短剧的内容版图</h2>
+          <span class="link-more">2026-11-08 更新</span>
+        </div>
+        <p>剧集这条内容线眼下分成几块互不重叠的地盘。长视频平台的主打剧集中在 24 到 40 集，单集 40 至 50 分钟，题材压在三类：都市职场、古装权谋和悬疑刑侦。古装权谋今年产量明显下降，从 2025 年同期的 27 部降到 14 部左右，悬疑刑侦则从 11 部涨到 22 部，爱奇艺、腾讯视频、优酷三家的待播片单里都能看到这个倾斜。</p>
+        <p>竖屏短剧是另一套节奏。单集 1 到 3 分钟，全剧 60 到 100 集，一个周末刷完是常态。题材更偏情绪爽点：复仇、逆袭、闪婚、认亲、豪门家斗。抖音、快手、红果短剧三家是主要分发口，一部短剧从上线到全网铺开通常 3 到 5 天，热度衰减也快，超过 7 天没起量基本就沉了。</p>
+        <p>港剧和台剧走的是精品小体量路线。TVB 今年的自制剧维持 18 到 25 集，合拍剧比例上升；台剧则多在 8 到 12 集，题材偏社会议题和家庭叙事，公视、Netflix 台湾、LINE TV 是常见播出方。日韩剧和欧美剧在字幕组的推动下同步速度已经压到 12 小时以内，但版本差异和删减情况需要单独核对。</p>
+        <p>值得关注的具体条目里，《雾港长夜》靠第 12 集的一场审讯戏把豆瓣评分从 7.4 拉到 8.1；《记账本里的春天》是今年短剧里少见的现实题材，24 集讲完一个县城小店的账本故事；港剧《铁闸背后》把警队内部调查拍成了双线叙事，第 9 集之后口碑回升。这些条目在不同平台的数据表现，构成了下面各栏目的判断基础。</p>
+        <div class="kw-chips">
+          <span>悬疑刑侦</span><span>都市职场</span><span>竖屏短剧</span><span>港剧合拍</span><span>台剧社会议题</span><span>分集更新</span><span>平台评分</span><span>删减版本对照</span>
+        </div>
+      </section>
+
+      <!-- 2 精选内容推荐 -->
+      <section class="section" id="picks">
+        <div class="section-head">
+          <h2>本周值得投入时间的 9 部剧</h2>
+          <span class="link-more">按口碑与更新进度筛选</span>
+        </div>
+        <div class="card-grid">
+
+          <article class="card searchable" data-keys="雾港长夜 悬疑 刑侦 爱奇艺 更新">
+            <img src="https://picsum.photos/seed/wugang01/400/300" width="400" height="300" loading="lazy" alt="《雾港长夜》雨夜港口审讯室场景">
+            <div class="card-body">
+              <span class="type-tag">悬疑刑侦</span>
+              <h3><a href="#deep">雾港长夜 · 更新至第14集</a></h3>
+              <p class="card-desc">码头连环案牵出十年前旧案，第 12 集审讯戏用 17 分钟单场景完成反转，豆瓣从 7.4 升到 8.1。第 14 集停在关键证人失联。</p>
+              <div class="tags"><span>双线叙事</span><span>爱奇艺独播</span><span>周更两集</span></div>
+              <div class="card-meta"><span>热度 <b>9821</b></span><span>评分 8.1</span><span>11-07 更新</span></div>
+            </div>
+          </article>
+
+          <article class="card searchable" data-keys="记账本里的春天 短剧 现实题材 红果 完结">
+            <img src="https://picsum.photos/seed/jizhang02/400/300" width="400" height="300" loading="lazy" alt="《记账本里的春天》县城小店柜台与账本">
+            <div class="card-body">
+              <span class="type-tag gold">竖屏短剧</span>
+              <h3><a href="#updates">记账本里的春天 · 全24集完结</a></h3>
+              <p class="card-desc">县城杂货店老板娘靠一本旧账本翻身，没有豪门认亲，也没车祸失忆。24 集 68 分钟，红果短剧站内完播率 61%。</p>
+              <div class="tags"><span>现实题材</span><span>红果短剧</span><span>一次看完</span></div>
+              <div class="card-meta"><span>热度 <b>8640</b></span><span>评分 7.9</span><span>11-06 完结</span></div>
+            </div>
+          </article>
+
+          <article class="card searchable" data-keys="铁闸背后 港剧 TVB 警队 双线">
+            <img src="https://picsum.photos/seed/tiezha03/400/300" width="400" height="300" loading="lazy" alt="《铁闸背后》警署走廊与铁闸门">
+            <div class="card-body">
+              <span class="type-tag blue">港剧</span>
+              <h3><a href="#news">铁闸背后 · 更新至第16集</a></h3>
+              <p class="card-desc">TVB 合拍剧，警队内部调查与街头案件双线推进。第 9 集后节奏收紧，第 15 集揭出一名内鬼，港区讨论量回升。</p>
+              <div class="tags"><span>内部调查</span><span>TVB合拍</span><span>周三更新</span></div>
+              <div class="card-meta"><span>热度 <b>7305</b></span><span>评分 7.6</span><span>11-05 更新</span></div>
+            </div>
+          </article>
+
+          <article class="card searchable" data-keys="春日迟迟 台剧 公视 家庭 社会议题">
+            <img src="https://picsum.photos/seed/chunri04/400/300" width="400" height="300" loading="lazy" alt="《春日迟迟》台北老屋阳台与晾衣绳">
+            <div class="card-body">
+              <span class="type-tag blue">台剧</span>
+              <h3><a href="#comments">春日迟迟 · 全10集上线</a></h3>
+              <p class="card-desc">公视出品，讲一对姐妹处理父亲留下的老屋与债务。10 集里没有强反派，冲突靠房产过户和照护责任推。豆瓣 8.3。</p>
+              <div class="tags"><span>家庭叙事</span><span>公视</span><span>一次上线</span></div>
+              <div class="card-meta"><span>热度 <b>6120</b></span><span>评分 8.3</span><span>11-02 上线</span></div>
+            </div>
+          </article>
+
+          <article class="card searchable" data-keys="长安十二夜 古装 权谋 腾讯 待播">
+            <img src="https://picsum.photos/seed/changan05/400/300" width="400" height="300" loading="lazy" alt="《长安十二夜》唐代坊市夜景与灯笼">
+            <div class="card-body">
+              <span class="type-tag">古装权谋</span>
+              <h3><a href="#cats">长安十二夜 · 11-12 开播</a></h3>
+              <p class="card-desc">腾讯视频独播，36 集，讲一夜之内长安城坊门连开三次的政变。预告片里出现 4 个不同阵营的旗号，权谋线偏群像。</p>
+              <div class="tags"><span>群像权谋</span><span>腾讯独播</span><span>待播</span></div>
+              <div class="card-meta"><span>想看 <b>12480</b></span><span>未开分</span><span>11-12 开播</span></div>
+            </div>
+          </article>
+
+          <article class="card searchable" data-keys="退婚之后 短剧 逆袭 抖音 爽点">
+            <img src="https://picsum.photos/seed/tuihun06/400/300" width="400" height="300" loading="lazy" alt="《退婚之后》宴席现场与红绸">
+            <div class="card-body">
+              <span class="type-tag gold">竖屏短剧</span>
+              <h3><a href="#rank">退婚之后 · 更新至第48集</a></h3>
+              <p class="card-desc">典型逆袭结构，前 8 集完成退婚、身份揭穿、反击三次爽点。抖音站内单集最高播放 2100 万，第 40 集后开始拖。</p>
+              <div class="tags"><span>逆袭爽点</span><span>抖音短剧</span><span>日更</span></div>
+              <div class="card-meta"><span>热度 <b>11020</b></span><span>评分 6.4</span><span>11-08 更新</span></div>
+            </div>
+          </article>
+
+          <article class="card searchable" data-keys="北纬三十度 悬疑 优酷 纪录式">
+            <img src="https://picsum.photos/seed/beiwei07/400/300" width="400" height="300" loading="lazy" alt="《北纬三十度》山区公路与雾中测绘图">
+            <div class="card-body">
+              <span class="type-tag">悬疑刑侦</span>
+              <h3><a href="#news">北纬三十度 · 更新至第8集</a></h3>
+              <p class="card-desc">纪录式拍摄，手持镜头多。讲地质队失踪案，前 6 集几乎没有配乐。优酷站内弹幕集中在第 7 集的测绘图细节。</p>
+              <div class="tags"><span>纪录式</span><span>优酷</span><span>周更一集</span></div>
+              <div class="card-meta"><span>热度 <b>5480</b></span><span>评分 7.8</span><span>11-04 更新</span></div>
+            </div>
+          </article>
+
+          <article class="card searchable" data-keys="半张车票 短剧 家庭 快手 亲情">
+            <img src="https://picsum.photos/seed/banzhang08/400/300" width="400" height="300" loading="lazy" alt="《半张车票》长途汽车站候车厅">
+            <div class="card-body">
+              <span class="type-tag gold">竖屏短剧</span>
+              <h3><a href="#guide">半张车票 · 全36集</a></h3>
+              <p class="card-desc">父子跨省找人的公路短剧，快手星芒出品。36 集里 6 集是车站等待戏，节奏慢但情绪扎实，中老年观众占比高。</p>
+              <div class="tags"><span>公路亲情</span><span>快手星芒</span><span>已完结</span></div>
+              <div class="card-meta"><span>热度 <b>4960</b></span><span>评分 7.5</span><span>10-28 完结</span></div>
+            </div>
+          </article>
+
+          <article class="card searchable" data-keys="深夜食堂东京篇 日剧 美食 治愈 字幕组">
+            <img src="https://picsum.photos/seed/shenye09/400/300" width="400" height="300" loading="lazy" alt="《深夜食堂东京篇》小餐馆吧台与暖色灯">
+            <div class="card-body">
+              <span class="type-tag blue">日剧</span>
+              <h3><a href="#recs">深夜食堂东京篇 · 更新至第6话</a></h3>
+              <p class="card-desc">新一季换到东京下町取景，每话一个客人。第 4 话讲出租车司机的关东煮偏好，字幕组同步在 12 小时内出片。</p>
+              <div class="tags"><span>美食治愈</span><span>字幕组同步</span><span>周更</span></div>
+              <div class="card-meta"><span>热度 <b>4320</b></span><span>评分 8.0</span><span>11-03 更新</span></div>
+            </div>
+          </article>
+
+        </div>
+        <div class="no-result" id="noResult">没有匹配的剧集条目，换个剧名或类型词试试，例如“短剧”“港剧”“悬疑”。</div>
+      </section>
+
+      <!-- 3 最新更新 -->
+      <section class="section" id="updates">
+        <div class="section-head">
+          <h2>11 月 6 日至 8 日分集更新</h2>
+          <span class="link-more">共 12 条</span>
+        </div>
+        <ul class="update-list">
+          <li class="searchable" data-keys="雾港长夜 第14集 爱奇艺"><span class="update-date">11-07</span><div class="update-main"><b>雾港长夜 第14集<em>悬疑</em></b><span>关键证人周砚在码头仓库失联，警方内部通报被提前泄露，结尾 2 分钟出现新角色工牌。</span></div></li>
+          <li class="searchable" data-keys="退婚之后 第48集 抖音"><span class="update-date">11-08</span><div class="update-main"><b>退婚之后 第48集<em>短剧</em></b><span>主角身份第二次揭穿，节奏明显放慢，本集只推进了一场董事会戏。</span></div></li>
+          <li class="searchable" data-keys="铁闸背后 第16集 TVB"><span class="update-date">11-05</span><div class="update-main"><b>铁闸背后 第16集<em>港剧</em></b><span>内鬼线索指向重案组副组长，第 15 集的通话记录成为关键物证。</span></div></li>
+          <li class="searchable" data-keys="北纬三十度 第8集 优酷"><span class="update-date">11-04</span><div class="update-main"><b>北纬三十度 第8集<em>悬疑</em></b><span>测绘图上多出一处未标注的矿洞，地质队失踪时间被修正为 2019 年 10 月。</span></div></li>
+          <li class="searchable" data-keys="深夜食堂东京篇 第6话 日剧"><span class="update-date">11-03</span><div class="update-main"><b>深夜食堂东京篇 第6话<em>日剧</em></b><span>本话主角是便利店员，菜单围绕一份冷掉的炒面，结尾没有反转。</span></div></li>
+          <li class="searchable" data-keys="春日迟迟 全10集 公视"><span class="update-date">11-02</span><div class="update-main"><b>春日迟迟 全10集上线<em>台剧</em></b><span>公视一次放出全 10 集，第 9 集房产过户段落是讨论最多的部分。</span></div></li>
+          <li class="searchable" data-keys="记账本里的春天 全24集 红果"><span class="update-date">11-06</span><div class="update-main"><b>记账本里的春天 全24集完结<em>短剧</em></b><span>结局没有让主角扩张开店，停在账本合上的一刻，红果站内弹幕量破 12 万。</span></div></li>
+          <li class="searchable" data-keys="长安十二夜 预告 腾讯"><span class="update-date">11-08</span><div class="update-main"><b>长安十二夜 定档预告<em>古装</em></b><span>36 集定档 11 月 12 日，预告片 2 分 14 秒，出现 4 个阵营旗号。</span></div></li>
+          <li class="searchable" data-keys="半张车票 全36集 快手"><span class="update-date">10-28</span><div class="update-main"><b>半张车票 全36集<em>短剧</em></b><span>快手星芒上线，父子在终点站见面的段落因台词简短被反复截图。</span></div></li>
+          <li class="searchable" data-keys="白露为霜 第20集 腾讯"><span class="update-date">11-07</span><div class="update-main"><b>白露为霜 第20集<em>都市</em></b><span>职场线收束，女主放弃晋升名额，弹幕对这段处理争议较大。</span></div></li>
+          <li class="searchable" data-keys="潮汐信号 第3集 韩剧"><span class="update-date">11-06</span><div class="update-main"><b>潮汐信号 第3集<em>韩剧</em></b><span>字幕组 11 小时内出片中字，第 3 集结尾的灯塔镜头被指与第 1 集构图呼应。</span></div></li>
+          <li class="searchable" data-keys="旧城书店 第9集 台剧"><span class="update-date">11-01</span><div class="update-main"><b>旧城书店 第9集<em>台剧</em></b><span>书店拆迁线进入调解阶段，第 9 集用一场 6 分钟长镜头拍完整条街。</span></div></li>
+        </ul>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section class="section" id="cats">
+        <div class="section-head">
+          <h2>按类型与地区找剧</h2>
+          <span class="link-more">12 个频道</span>
+        </div>
+        <div class="cat-grid">
+          <a class="cat-item" href="#picks"><b>悬疑刑侦</b><span>22 部在播 · 双线叙事为主</span></a>
+          <a class="cat-item" href="#picks"><b>古装权谋</b><span>14 部 · 群像结构居多</span></a>
+          <a class="cat-item" href="#picks"><b>都市职场</b><span>19 部 · 30—40 集</span></a>
+          <a class="cat-item" href="#picks"><b>竖屏短剧</b><span>60—100 集 · 单集 1—3 分钟</span></a>
+          <a class="cat-item" href="#picks"><b>港剧合拍</b><span>TVB 自制与合拍</span></a>
+          <a class="cat-item" href="#picks"><b>台剧社会议题</b><span>8—12 集 · 公视与平台</span></a>
+          <a class="cat-item" href="#picks"><b>日剧同步</b><span>字幕组 12 小时内出片</span></a>
+          <a class="cat-item" href="#picks"><b>韩剧周更</b><span>tvN · JTBC 为主</span></a>
+          <a class="cat-item" href="#picks"><b>欧美剧</b><span>流媒体同步 · 版本差异大</span></a>
+          <a class="cat-item" href="#picks"><b>家庭叙事</b><span>照护 · 房产 · 代际</span></a>
+          <a class="cat-item" href="#picks"><b>美食治愈</b><span>单集单元剧结构</span></a>
+          <a class="cat-item" href="#picks"><b>完结可刷</b><span>一次看完 · 不用等更</span></a>
+        </div>
+      </section>
+
+      <!-- 5 深度解析 -->
+      <section class="section deep" id="deep">
+        <div class="section-head">
+          <h2>一部剧值不值得追：从集数、更新节奏到评分可信度</h2>
+          <span class="link-more">深度解析</span>
+        </div>
+
+        <h3>集数决定了你该用什么方式看</h3>
+        <p>24 集、36 集、80 集，对应的观看策略完全不同。24 集的剧集通常在第 8 到 12 集完成第一次主冲突收束，第 18 集进入终局铺垫，中途弃剧的损失不大。《雾港长夜》共 28 集，第 12 集的审讯戏是第一次大反转，前 11 集其实都在铺线索，如果只看了前 4 集就判断“节奏慢”，结论会偏。</p>
+        <p>短剧则是另一种算法。60 到 100 集、每集 1 到 3 分钟，真正决定是否继续看的是前 8 集。以《退婚之后》为例，前 8 集完成退婚、身份揭穿、反击三次爽点，第 9 集开始进入日常拉扯，第 40 集后明显拖延。看短剧的合理做法是：前 8 集判断类型是否对味，第 20 集左右看节奏有没有塌，超过第 40 集还在原地打转就可以停。</p>
+        <table class="compare-table">
+          <thead><tr><th>类型</th><th>常见集数</th><th>判断节点</th><th>弃剧成本</th></tr></thead>
+          <tbody>
+            <tr><td>长剧（悬疑/职场）</td><td>24—40 集</td><td>第 10—12 集、第 18 集</td><td>中，前 8 集可试</td></tr>
+            <tr><td>竖屏短剧</td><td>60—100 集</td><td>第 8 集、第 20 集、第 40 集</td><td>低，单集时长短</td></tr>
+            <tr><td>港剧合拍</td><td>18—25 集</td><td>第 9 集、第 15 集</td><td>中，节奏偏慢热</td></tr>
+            <tr><td>台剧</td><td>8—12 集</td><td>第 3 集、第 7 集</td><td>低，一次看完</td></tr>
+          </tbody>
+        </table>
+
+        <h3>更新的稳定性比更新速度更影响体验</h3>
+        <p>周更两集、周更一集、日更、一次放出全季，这四种排播对追剧体验的影响差别很大。日更的短剧适合碎片时间，但一旦断更超过 48 小时，热度基本回不来。一次放出全季的台剧和部分欧美剧适合周末集中看，缺点是社交讨论集中在前 3 天，之后很难找人聊。</p>
+        <p>周更剧集的问题在断档。以《北纬三十度》为例，第 7 集到第 8 集之间隔了 11 天，原因是后期调色返工，站内弹幕在第 8 集开头集中吐槽“忘了上一集讲什么”。这类信息在条目页里通常不会写，只能靠更新记录反推。判断一部周更剧值不值得跟，先看它前 6 集的更新间隔是否稳定在 7 天以内。</p>
+        <div class="callout"><b>可核对的一条：</b>《铁闸背后》前 10 集更新间隔分别为 7、7、8、7、7、9、7、7、7、8 天，第 6 集和第 10 集各延后一天，官方未说明原因。两次延后都发生在周末档，与 TVB 的排播调整周期吻合。</div>
+
+        <h3>评分要拆开看：样本量、打分分布和时间点</h3>
+        <p>豆瓣 8.1 和 7.6 之间的差距，不一定代表质量差距。要看三件事：打分人数、分数分布、开分时间。《雾港长夜》开分 7.4，打分人数 1.2 万，第 12 集播出后三天内涨到 8.1，打分人数变成 3.8 万——这轮上涨主要来自第 12 集的单集口碑，不代表全剧稳定在 8.1。</p>
+        <p>短剧的评分参考价值更低。《退婚之后》6.4 分，打分人数不到 4000，其中 1 星和 5 星占比合计 47%，典型的情绪化打分结构。这类分数只能说明“有争议”，不能说明“质量差”。反过来，《记账本里的春天》7.9 分、打分人数 8600，4 星占比 41%，分布相对正常，参考价值更高。</p>
+        <ul>
+          <li>打分人数低于 5000：只能看趋势，不能横向比较。</li>
+          <li>1 星与 5 星合计超过 45%：说明争议集中在立场而非制作。</li>
+          <li>开分后 7 天内涨跌超过 0.5：通常对应某一集的单点爆发，不代表全剧。</li>
+        </ul>
+
+        <h3>版本差异：删减、配音和字幕</h3>
+        <p>海外剧和合拍剧的版本问题最容易被忽略。同一部韩剧，流媒体版和电视台版的单集时长可能差 3 到 5 分钟，删掉的多是支线配角戏。港剧合拍版和内销版在结局上偶有差异，《铁闸背后》目前两个版本的第 15 集内容一致，但第 16 集的预告剪辑不同。</p>
+        <p>字幕方面，日剧的同步速度已经压到 12 小时以内，但不同字幕组对专有名词的译法不统一。《深夜食堂东京篇》第 4 话里出现的“おでん”，有的组译“关东煮”，有的组译“熬点”，搜索时两种词都要试。欧美剧的版本差异更大，部分剧集在不同平台的单集时长差 2 分钟以上，涉及暴力镜头的处理。</p>
+
+        <h3>把判断拆成可核对的结构</h3>
+        <p>说一部剧“传播快”，具体快在哪几个环节？拆开看是三层：第一层是上线首日的平台推荐位，决定初始曝光；第二层是第 2 到 3 天的短视频二创量，决定能不能破圈；第三层是第 5 天之后的社交平台讨论，决定能不能留住人。《雾港长夜》第 12 集播出后 6 小时内，抖音相关二创视频超过 1400 条，这是它评分上涨的直接推力，而不是剧集本身在第 12 集突然变好。</p>
+        <p>说一部剧“可信度低”，缺的是哪一项来源？常见的有三种：缺官方更新公告，只能靠网友截图；缺打分人数，评分参考价值低；缺版本说明，不知道看的是哪个剪辑。三者缺一，判断就要降一档。这不是抽象的可信度问题，是可以逐项核对的结构。</p>
+      </section>
+
+      <!-- 6 体验指南 -->
+      <section class="section" id="guide">
+        <div class="section-head">
+          <h2>从想看到看完：一条可执行的追剧路径</h2>
+          <span class="link-more">消费路径</span>
+        </div>
+        <p class="lead">下面这条路径按时间投入排序，从 10 分钟试看到整季刷完，每一步都有明确的判断依据。</p>
+        <ol class="steps">
+          <li><b>先用 10 分钟判断类型对不对味。</b>长剧看第 1 集前 10 分钟，短剧看前 3 集。重点不是剧情好不好，而是画面质感、台词密度、配乐风格这三项你能不能接受。三项里有两项别扭，后面很难改观。</li>
+          <li><b>再确认更新状态。</b>已完结的直接看；在播的看更新间隔是否稳定。周更剧如果前 6 集有两次以上延后，建议等完结再刷，避免断档忘剧情。</li>
+          <li><b>查打分人数而不是只看分数。</b>低于 5000 人的分数只能当参考。同时看 1 星和 5 星的占比，合计超过 45% 说明争议大，可以先看两集再决定。</li>
+          <li><b>核对版本。</b>海外剧和合拍剧先确认单集时长，和已知版本对比。差 3 分钟以上就要留意删减。字幕组译名不统一时，搜两种写法。</li>
+          <li><b>决定投入方式。</b>24 集以内的剧可以按周跟，36 集以上建议攒到完结。短剧超过 40 集还在拖的，直接跳到结局看收尾。</li>
+          <li><b>看完留一条具体记录。</b>记下停在第几集、为什么停，下次再遇到同类型条目时可以对照，比凭印象判断准。</li>
+        </ol>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section class="section faq" id="faq">
+        <div class="section-head">
+          <h2>追剧时常被问到的 6 个问题</h2>
+          <span class="link-more">问答</span>
+        </div>
+        <details>
+          <summary>《雾港长夜》第12集之后评分为什么涨了0.7？</summary>
+          <div class="faq-a">第 12 集用 17 分钟单场景审讯完成一次反转，把前 11 集分散的线索收成一条。播出后三天内豆瓣打分人数从 1.2 万涨到 3.8 万，新增打分集中在 4 星和 5 星。涨幅来自这一集的单点口碑，不代表全剧每一集都在这个水平。</div>
+        </details>
+        <details>
+          <summary>竖屏短剧一般多少集，多久能看完？</summary>
+          <div class="faq-a">常见 60 到 100 集，单集 1 到 3 分钟，全剧总时长 90 到 180 分钟。按每天刷 30 分钟算，3 到 6 天能看完一部。《记账本里的春天》是偏短的，24 集共 68 分钟，一个晚上能刷完。</div>
+        </details>
+        <details>
+          <summary>港剧合拍版和TVB原版内容一样吗？</summary>
+          <div class="faq-a">多数情况下正片一致，差异集中在结局处理和预告剪辑。《铁闸背后》目前两个版本第 15 集内容相同，第 16 集预告的剪辑顺序不同。合拍剧偶尔会有内地版加长或删减支线的处理，看之前先核对单集时长。</div>
+        </details>
+        <details>
+          <summary>豆瓣7分出头的老剧还值得补吗？</summary>
+          <div class="faq-a">要看打分人数和分布。7.2 分但打分人数超过 5 万、4 星占比高的，通常是有稳定受众的类型剧，可以补。7.2 分但打分人数不到 3000、1 星和 5 星合计过半的，争议大于共识，补之前先看两集。</div>
+        </details>
+        <details>
+          <summary>日剧字幕组出片要等多久？</summary>
+          <div class="faq-a">热门剧集在播出后 12 小时内出片是常态，《深夜食堂东京篇》第 6 话的字幕版在播出当晚就出现了。冷门剧或深夜档可能要等 1 到 2 天。不同字幕组对专有名词的译法不一致，搜的时候两种写法都试一下。</div>
+        </details>
+        <details>
+          <summary>一次放出全季的台剧适合什么样的人看？</summary>
+          <div class="faq-a">适合周末有整块时间、不想等更的人。8 到 12 集的体量，一次看完大约 6 到 9 小时。缺点是社交讨论集中在上线后 3 天内，之后很难找到同期观众聊。《春日迟迟》全 10 集就属于这一类。</div>
+        </details>
+      </section>
+
+      <!-- 8 用户评论 -->
+      <section class="section" id="comments">
+        <div class="section-head">
+          <h2>观众在说些什么</h2>
+          <span class="link-more">16 条</span>
+        </div>
+        <div class="comment-list">
+          <div class="comment"><div class="comment-head"><span class="avatar">周</span><b>周砚不姓周</b><em>11-08</em></div><p>第14集结尾那个工牌镜头，我暂停看了三遍，编号和第一集出现的那张对不上，不知道是道具穿帮还是伏笔。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">阿</span><b>阿柚看剧</b><em>11-08</em></div><p>《记账本里的春天》是真的少见，没有认亲没有车祸，账本上的数字都对得上。就是结局太平了，我妈说看着不过瘾。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">老</span><b>老陈的下午</b><em>11-07</em></div><p>《铁闸背后》第15集内鬼揭出来之后，前面几集的通话记录我回头重看了，确实有伏笔，但第9集那段解释还是有点硬。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">林</span><b>林间有雾</b><em>11-07</em></div><p>短剧前八集是真的爽，后面四十集开始注水，董事会开了三集还没开完。已经跳到结局了，结局也就那样。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">q</span><b>qwerty_1990</b><em>11-06</em></div><p>《春日迟迟》第9集房产过户那段，我家去年刚经历过类似的事，台词写得比很多家庭剧实在。就是结尾收得太快。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">半</span><b>半张票根</b><em>11-06</em></div><p>《半张车票》车站等待那6集我快进看的，父子见面那段倒是看了两遍。快手星芒的短剧质量忽高忽低。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">北</span><b>北纬三十度粉</b><em>11-05</em></div><p>第7集测绘图那个细节，我专门去查了地质图例，编剧是做过功课的。第8集矿洞的位置和第一集的地图对得上。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">深</span><b>深夜食堂常客</b><em>11-04</em></div><p>第6话没有反转，看着反而舒服。字幕组把“おでん”译成关东煮，另一个组译熬点，搜的时候两个都试了。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">小</span><b>小满不满</b><em>11-04</em></div><p>《白露为霜》第20集女主放弃晋升名额那段，弹幕吵得很厉害。我觉得编剧本意是想写选择，但写得像逃避。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">K</span><b>K记看片</b><em>11-03</em></div><p>古装权谋今年确实少了，去年一口气追了三部，今年只有《长安十二夜》有点想看，等开播再说。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">潮</span><b>潮汐观测员</b><em>11-03</em></div><p>《潮汐信号》第3集结尾的灯塔构图，跟第1集开头是同一个机位，这种呼应现在不多了。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">账</span><b>账本爱好者</b><em>11-02</em></div><p>红果短剧的完播率数据我在后台看到过，61%算高的了，大部分短剧到20集就掉到30%以下。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">铁</span><b>铁闸门卫</b><em>11-02</em></div><p>TVB合拍剧这两年节奏明显快了一点，但结尾还是老毛病，第16集预告剪得比正片还紧张。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">路</span><b>路过打酱油</b><em>11-01</em></div><p>最近剧太多，看不过来，先收藏几部完结的慢慢补。短剧倒是不占时间。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">旧</span><b>旧城书店读者</b><em>11-01</em></div><p>第9集那个6分钟长镜头拍完整条街，调度是真好，就是剧情推进慢了点，拆迁调解开了两集。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">退</span><b>退婚之后弃了</b><em>10-31</em></div><p>6.4分我觉得还挺准的，前八集能看，后面就是重复。抖音上二创剪得比正片好看。</p></div>
+        </div>
+      </section>
+
+      <!-- 9 相关资讯 -->
+      <section class="section" id="news">
+        <div class="section-head">
+          <h2>剧集条目与排播动态</h2>
+          <span class="link-more">2026-11-08</span>
+        </div>
+        <ul class="news-list">
+          <li class="searchable" data-keys="长安十二夜 定档 腾讯 36集">
+            <div class="news-title"><a href="#picks">《长安十二夜》定档11月12日，腾讯视频独播36集</a><time>11-08</time></div>
+            <p>预告片 2 分 14 秒，出现 4 个阵营旗号。平台页面显示会员首更 6 集，之后每周三四各更新 2 集。</p>
+          </li>
+          <li class="searchable" data-keys="记账本里的春天 红果 完播率 完结">
+            <div class="news-title"><a href="#updates">《记账本里的春天》完结，红果站内完播率61%</a><time>11-06</time></div>
+            <p>24 集总时长 68 分钟，是红果本月现实题材短剧里完播率最高的一部，弹幕量破 12 万，第 22 集账本合上的画面被截图最多。</p>
+          </li>
+          <li class="searchable" data-keys="铁闸背后 第16集 预告 内鬼 TVB">
+            <div class="news-title"><a href="#comments">《铁闸背后》第16集预告释出，内鬼线索指向重案组副组长</a><time>11-05</time></div>
+            <p>第 15 集的通话记录成为关键物证，TVB 官方账号在预告发布后 4 小时内补充了一条人物关系图。合拍版与内销版预告剪辑顺序不同。</p>
+          </li>
+          <li class="searchable" data-keys="北纬三十度 后期 调色 延更">
+            <div class="news-title"><a href="#deep">《北纬三十度》第8集延后11天，优酷页面标注“后期调色返工”</a><time>11-04</time></div>
+            <p>第 7 集与第 8 集之间间隔 11 天，站内弹幕在第 8 集开头集中吐槽断档。剧集共 16 集，剩余更新恢复周更一集。</p>
+          </li>
+          <li class="searchable" data-keys="春日迟迟 公视 上线 全10集 评分">
+            <div class="news-title"><a href="#guide">《春日迟迟》公视一次放出全10集，豆瓣开分8.3</a><time>11-02</time></div>
+            <p>开分后 48 小时内打分人数从 2100 涨到 6400，4 星占比 44%。第 9 集房产过户段落是讨论最集中的部分。</p>
+          </li>
+          <li class="searchable" data-keys="深夜食堂东京篇 字幕组 同步 第6话">
+            <div class="news-title"><a href="#recs">《深夜食堂东京篇》第6话字幕版当晚出片，同步时间压到9小时</a><time>11-03</time></div>
+            <p>新一季换到东京下町取景，第 6 话主角是便利店员。不同字幕组对“おでん”译法不一致，搜索时需两种写法都试。</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 10 相关推荐 -->
+      <section class="section" id="recs">
+        <div class="section-head">
+          <h2>按具体方向再挑一挑</h2>
+          <span class="link-more">8 个方向</span>
+        </div>
+        <div class="rec-tags">
+          <a href="#picks">单场景审讯戏</a>
+          <a href="#picks">县城现实题材短剧</a>
+          <a href="#picks">警队内部调查线</a>
+          <a href="#picks">家庭房产与照护叙事</a>
+          <a href="#picks">纪录式手持拍摄悬疑</a>
+          <a href="#picks">公路亲情短剧</a>
+          <a href="#picks">单集单元剧结构</a>
+          <a href="#picks">一次放出全季的台剧</a>
+        </div>
+      </section>
+
+      <!-- 11 口碑榜单 -->
+      <section class="section" id="rank">
+        <div class="section-head">
+          <h2>11月首周口碑榜（按打分人数与分布加权）</h2>
+          <span class="link-more">统计至 11-08</span>
+        </div>
+        <ol class="rank-list">
+          <li><b>春日迟迟</b><span>8.3 · 6400人打分</span></li>
+          <li><b>雾港长夜</b><span>8.1 · 3.8万人打分</span></li>
+          <li><b>深夜食堂东京篇</b><span>8.0 · 2900人打分</span></li>
+          <li><b>记账本里的春天</b><span>7.9 · 8600人打分</span></li>
+          <li><b>北纬三十度</b><span>7.8 · 5100人打分</span></li>
+          <li><b>铁闸背后</b><span>7.6 · 7200人打分</span></li>
+          <li><b>半张车票</b><span>7.5 · 3300人打分</span></li>
+          <li><b>白露为霜</b><span>7.1 · 1.1万人打分</span></li>
+          <li><b>退婚之后</b><span>6.4 · 3800人打分</span></li>
+          <li><b>旧城书店</b><span>6.9 · 1900人打分</span></li>
+        </ol>
+      </section>
+
+      <!-- 12 投稿互动 -->
+      <section class="section submit-panel" id="submit">
+        <div>
+          <h2>投递剧集条目与观剧记录</h2>
+          <p>发现未收录的剧集、更新延迟、版本差异，或者想写一条具体的追剧笔记，都可以提交。写清剧名、平台、集数与日期，审核后进入条目页。每周整理一次投稿情况，11 月 6 日那批共处理 37 条，其中 21 条补充了更新记录。</p>
+        </div>
+        <div class="submit-actions">
+          <button class="btn-primary" type="button" id="submitBtn2">提交剧集条目</button>
+          <a class="btn-ghost" href="#comments">写一条观剧评论</a>
+          <a class="btn-ghost" href="#guide">查看投稿规范</a>
+        </div>
+      </section>
+
+    </div>
+
+    <aside class="aside-col" aria-label="辅助信息">
+      <div class="aside-card">
+        <h3>今日更新提醒</h3>
+        <ul>
+          <li><i>11-08</i>退婚之后 第48集</li>
+          <li><i>11-08</i>长安十二夜 定档预告</li>
+          <li><i>11-07</i>雾港长夜 第14集</li>
+          <li><i>11-07</i>白露为霜 第20集</li>
+          <li><i>11-06</i>记账本里的春天 完结</li>
+          <li><i>11-06</i>潮汐信号 第3集</li>
+        </ul>
+      </div>
+
+      <div class="aside-card">
+        <h3>短剧热榜</h3>
+        <ul class="mini-rank">
+          <li><b>退婚之后</b><span>11020</span></li>
+          <li><b>记账本里的春天</b><span>8640</span></li>
+          <li><b>半张车票</b><span>4960</span></li>
+          <li><b>旧梦不须记</b><span>4210</span></li>
+          <li><b>城南旧货铺</b><span>3880</span></li>
+          <li><b>回门那天</b><span>3410</span></li>
+        </ul>
+      </div>
+
+      <div class="aside-card">
+        <h3>版本核对提示</h3>
+        <ul>
+          <li><i>·</i>韩剧流媒体版与电视台版单集时长可能差 3—5 分钟</li>
+          <li><i>·</i>港剧合拍版结局处理偶有差异</li>
+          <li><i>·</i>日剧字幕组译名不统一，两种写法都试</li>
+          <li><i>·</i>欧美剧不同平台删减标准不同</li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#f0b429"/>
+          <circle cx="32" cy="32" r="17" fill="none" stroke="#1c2b4a" stroke-width="4"/>
+          <path d="M27 24l16 8-16 8z" fill="#1c2b4a"/>
+        </svg>
+        <b>97婷婷在线网址</b>
+      </div>
+      <p class="footer-desc">条目覆盖 2025 年 1 月至 2026 年 11 月的华语长剧、竖屏短剧、港台剧与部分海外剧。日期与集数以平台页面为准，评分取豆瓣与站内公开数据，每条更新记录保留原始时间戳。11 月 8 日当天整理更新 12 条、完结条目 1 部。</p>
+    </div>
+    <div class="footer-col">
+      <h4>内容频道</h4>
+      <a href="#picks">剧集精选</a>
+      <a href="#updates">更新速递</a>
+      <a href="#cats">分类索引</a>
+      <a href="#rank">口碑榜单</a>
+    </div>
+    <div class="footer-col">
+      <h4>阅读与判断</h4>
+      <a href="#deep">深度解析</a>
+      <a href="#guide">追剧路径</a>
+      <a href="#faq">常见问答</a>
+      <a href="#news">剧集资讯</a>
+    </div>
+    <div class="footer-col">
+      <h4>参与</h4>
+      <a href="#submit">投稿剧集</a>
+      <a href="#comments">观众评论</a>
+      <a href="#recs">相关推荐</a>
+      <a href="#overview">领域概览</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>内容为示例整理，剧名、评分、热度等数据仅作条目展示之用。</span>
+    <span>最近核对：2026-11-08</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var nav = document.getElementById('mainNav');
+  var burger = document.getElementById('hamburger');
+  var mask = document.getElementById('mask');
+  var toTop = document.getElementById('toTop');
+
+  function closeNav(){
+    nav.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    mask.classList.remove('on');
+  }
+  function openNav(){
+    nav.classList.add('open');
+    burger.setAttribute('aria-expanded','true');
+    mask.classList.add('on');
+  }
+  burger.addEventListener('click', function(){
+    if(nav.classList.contains('open')){ closeNav(); } else { openNav(); }
+  });
+  mask.addEventListener('click', closeNav);
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 1024){ closeNav(); }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ closeNav(); }
+  });
+
+  // 搜索筛选
+  var input = document.getElementById('siteSearch');
+  var btn = document.getElementById('searchBtn');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.searchable'));
+  var noResult = document.getElementById('noResult');
+
+  function doSearch(){
+    var q = (input.value || '').trim().toLowerCase();
+    if(!q){
+      cards.forEach(function(c){ c.classList.remove('hidden'); });
+      noResult.classList.remove('on');
+      return;
+    }
+    var hit = 0;
+    cards.forEach(function(c){
+      var keys = (c.getAttribute('data-keys') || '') + ' ' + c.textContent.toLowerCase();
+      var ok = keys.toLowerCase().indexOf(q) > -1;
+      c.classList.toggle('hidden', !ok);
+      if(ok) hit++;
+    });
+    noResult.classList.toggle('on', hit === 0);
+  }
+  btn.addEventListener('click', doSearch);
+  input.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ doSearch(); } });
+  input.addEventListener('input', function(){ if(input.value === ''){ doSearch(); } });
+
+  // 投稿按钮跳转
+  function jumpSubmit(){
+    var el = document.getElementById('submit');
+    if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
+  }
+  document.getElementById('submitJump').addEventListener('click', jumpSubmit);
+  document.getElementById('submitBtn2').addEventListener('click', function(){
+    var el = document.getElementById('submit');
+    if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
+  });
+
+  // 回到顶部
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > window.innerHeight){
+      toTop.classList.add('on');
+    } else {
+      toTop.classList.remove('on');
+    }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // 频道高亮
+  var channelLinks = Array.prototype.slice.call(document.querySelectorAll('.channel-col a'));
+  var sections = channelLinks.map(function(a){
+    return document.querySelector(a.getAttribute('href'));
+  });
+  function highlight(){
+    var pos = window.scrollY + 140;
+    var idx = 0;
+    sections.forEach(function(s, i){
+      if(s && s.offsetTop <= pos){ idx = i; }
+    });
+    channelLinks.forEach(function(a, i){
+      a.classList.toggle('active', i === idx);
+    });
+  }
+  window.addEventListener('scroll', highlight, {passive:true});
+  highlight();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "97婷婷在线网址",
+  "description": "聚合华语剧集、短剧、港台剧与海外剧条目索引，提供分集更新时间线、平台播出对照、评分口碑与追剧清单。",
+  "inLanguage": "zh-CN"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "《雾港长夜》第12集之后评分为什么涨了0.7？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "第12集用17分钟单场景审讯完成一次反转，把前11集分散的线索收成一条。播出后三天内豆瓣打分人数从1.2万涨到3.8万，新增打分集中在4星和5星。涨幅来自这一集的单点口碑，不代表全剧每一集都在这个水平。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "竖屏短剧一般多少集，多久能看完？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "常见60到100集，单集1到3分钟，全剧总时长90到180分钟。按每天刷30分钟算，3到6天能看完一部。《记账本里的春天》是偏短的，24集共68分钟，一个晚上能刷完。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "港剧合拍版和TVB原版内容一样吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "多数情况下正片一致，差异集中在结局处理和预告剪辑。《铁闸背后》目前两个版本第15集内容相同，第16集预告的剪辑顺序不同。合拍剧偶尔会有内地版加长或删减支线的处理，看之前先核对单集时长。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "豆瓣7分出头的老剧还值得补吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "要看打分人数和分布。7.2分但打分人数超过5万、4星占比高的，通常是有稳定受众的类型剧，可以补。7.2分但打分人数不到3000、1星和5星合计过半的，争议大于共识，补之前先看两集。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "日剧字幕组出片要等多久？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "热门剧集在播出后12小时内出片是常态，《深夜食堂东京篇》第6话的字幕版在播出当晚就出现了。冷门剧或深夜档可能要等1到2天。不同字幕组对专有名词的译法不一致，搜的时候两种写法都试一下。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "一次放出全季的台剧适合什么样的人看？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "适合周末有整块时间、不想等更的人。8到12集的体量，一次看完大约6到9小时。缺点是社交讨论集中在上线后3天内，之后很难找到同期观众聊。《春日迟迟》全10集就属于这一类。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+              </html>
