@@ -1,0 +1,2012 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eeuss影院骑兵区高清播放 - 影视聚合与深度推荐</title>
+  <meta name="description" content="eeuss影院骑兵区高清播放汇聚2026年11月高清电影与剧集，提供战争史诗、悬疑犯罪、奇幻冒险等类型的精选片单、更新动态、深度解析和用户评分，适合影迷快速找到可看内容。">
+  <meta name="keywords" content="eeuss影院骑兵区高清播放">
+  <style>
+    :root {
+      --primary: #1e3a5f;
+      --primary-light: #2c5282;
+      --primary-dark: #0f1f33;
+      --accent: #c53030;
+      --accent-light: #fc8181;
+      --bg: #f5f7fa;
+      --surface: #ffffff;
+      --surface-alt: #edf2f7;
+      --text-primary: #1a202c;
+      --text-secondary: #4a5568;
+      --text-tertiary: #718096;
+      --border: #e2e8f0;
+      --border-dark: #cbd5e0;
+      --radius-card: 12px;
+      --radius-button: 8px;
+      --radius-tag: 20px;
+      --radius-banner: 16px;
+      --shadow-default: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-hover: 0 10px 25px rgba(0,0,0,0.12), 0 4px 10px rgba(0,0,0,0.08);
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      --sticky-offset: 112px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--sticky-offset); }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    ul, ol { list-style: none; }
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    /* 吸顶公告条 + 页头 */
+    .sticky-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .announce-bar {
+      background: var(--primary-dark);
+      color: #e2e8f0;
+      font-size: 13px;
+      padding: 8px 0;
+    }
+    .announce-bar .container {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .announce-brand {
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.5px;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .announce-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #cbd5e0;
+      white-space: nowrap;
+    }
+    .announce-item .tag {
+      background: var(--accent);
+      color: #fff;
+      font-size: 11px;
+      padding: 1px 7px;
+      border-radius: 10px;
+      line-height: 1.5;
+    }
+    .announce-date {
+      color: #a0aec0;
+      font-size: 12px;
+    }
+    /* 页头 */
+    .header {
+      padding: 12px 0;
+    }
+    .header .container {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .logo svg {
+      width: 38px;
+      height: 38px;
+    }
+    .logo-text {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 0.3px;
+      line-height: 1.3;
+    }
+    .main-nav {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+    .main-nav a {
+      padding: 6px 12px;
+      border-radius: var(--radius-button);
+      font-size: 14px;
+      color: var(--text-secondary);
+      font-weight: 500;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      background: var(--surface-alt);
+      color: var(--primary);
+      outline: none;
+    }
+    .main-nav a:focus-visible {
+      box-shadow: 0 0 0 2px var(--primary-light);
+    }
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--surface-alt);
+      border-radius: var(--radius-tag);
+      padding: 4px 14px;
+      border: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .search-box:focus-within {
+      border-color: var(--primary-light);
+      background: #fff;
+    }
+    .search-box input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 13px;
+      width: 140px;
+      padding: 4px 0;
+      color: var(--text-primary);
+    }
+    .search-box input::placeholder { color: var(--text-tertiary); }
+    .search-box button {
+      font-size: 14px;
+      color: var(--text-tertiary);
+      padding: 0 2px;
+      line-height: 1;
+    }
+    .search-box button:hover { color: var(--primary); }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 7px 16px;
+      border-radius: var(--radius-button);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary);
+      background: transparent;
+      border: 1.5px solid var(--primary);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 55%, #2d4a6f 100%);
+      color: #fff;
+      padding: 56px 0 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -60px;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(197,48,48,0.25) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    .hero-desc {
+      font-size: 15px;
+      color: #cbd5e0;
+      line-height: 1.8;
+      max-width: 620px;
+      margin-bottom: 24px;
+    }
+    .hero-desc strong { color: #fff; font-weight: 600; }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 24px;
+      border-radius: var(--radius-button);
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      background: var(--accent);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover {
+      background: #9b2c2c;
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 24px;
+      border-radius: var(--radius-button);
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.35);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-ghost:hover {
+      border-color: #fff;
+      background: rgba(255,255,255,0.08);
+    }
+    .hero-stats {
+      display: flex;
+      gap: 28px;
+      font-size: 13px;
+      color: #a0aec0;
+    }
+    .hero-stats strong {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      display: block;
+      line-height: 1.3;
+    }
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-visual svg {
+      width: 100%;
+      max-width: 340px;
+      height: auto;
+      filter: drop-shadow(0 12px 30px rgba(0,0,0,0.35));
+    }
+    /* 三栏门户布局 */
+    .portal-layout {
+      display: grid;
+      grid-template-columns: 180px 1fr 250px;
+      gap: 28px;
+      padding: 32px 0 56px;
+      align-items: start;
+    }
+    /* 左侧频道 */
+    .channel-sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 16px 0;
+      overflow: hidden;
+    }
+    .channel-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0 16px 10px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 6px;
+    }
+    .channel-list a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      transition: background 0.15s, color 0.15s;
+      border-left: 3px solid transparent;
+    }
+    .channel-list a:hover {
+      background: var(--surface-alt);
+      color: var(--primary);
+    }
+    .channel-list a.active {
+      background: #ebf4ff;
+      color: var(--primary);
+      border-left-color: var(--primary);
+      font-weight: 600;
+    }
+    .channel-list a .ch-icon {
+      font-size: 15px;
+      width: 20px;
+      text-align: center;
+    }
+    /* 主内容区 */
+    .main-content {
+      min-width: 0;
+    }
+    .section {
+      margin-bottom: 48px;
+    }
+    .section:last-child { margin-bottom: 0; }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .section-header h2 {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: 0.3px;
+      line-height: 1.3;
+    }
+    .section-header .sub {
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+    /* 领域概览 */
+    .overview-text {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 22px 26px;
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.85;
+    }
+    .overview-text p { margin-bottom: 12px; }
+    .overview-text p:last-child { margin-bottom: 0; }
+    .overview-text strong { color: var(--text-primary); }
+    /* 精选卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .content-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.25s;
+      display: flex;
+      flex-direction: column;
+    }
+    .content-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+    .card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      background: var(--surface-alt);
+    }
+    .card-body {
+      padding: 14px 16px 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-type {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary-light);
+      background: #ebf4ff;
+      border-radius: var(--radius-tag);
+      padding: 1px 9px;
+      margin-bottom: 8px;
+      align-self: flex-start;
+    }
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    .card-desc {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 10px;
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11.5px;
+      color: var(--text-tertiary);
+      flex-wrap: wrap;
+    }
+    .card-meta .score {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .card-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .card-tags span {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      background: var(--surface-alt);
+      padding: 1px 8px;
+      border-radius: var(--radius-tag);
+    }
+    /* 更新列表 */
+    .update-list {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 8px 0;
+    }
+    .update-item {
+      display: flex;
+      gap: 14px;
+      padding: 13px 20px;
+      border-bottom: 1px solid var(--border);
+      align-items: baseline;
+      transition: background 0.15s;
+    }
+    .update-item:last-child { border-bottom: none; }
+    .update-item:hover { background: #fafbfc; }
+    .update-date {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+      min-width: 70px;
+      font-variant-numeric: tabular-nums;
+    }
+    .update-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      min-width: 120px;
+    }
+    .update-summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+      flex: 1;
+      line-height: 1.6;
+    }
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .category-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 16px 14px;
+      text-align: center;
+      transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+      border: 1.5px solid transparent;
+      display: block;
+    }
+    .category-item:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+      border-color: var(--primary-light);
+    }
+    .category-item .cat-icon {
+      font-size: 22px;
+      margin-bottom: 6px;
+      display: block;
+      line-height: 1.2;
+    }
+    .category-item .cat-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+    .category-item .cat-count {
+      font-size: 11.5px;
+      color: var(--text-tertiary);
+    }
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 26px 30px;
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.85;
+    }
+    .deep-dive h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 22px 0 10px;
+      padding-left: 12px;
+      border-left: 3px solid var(--accent);
+    }
+    .deep-dive h3:first-child { margin-top: 0; }
+    .deep-dive p { margin-bottom: 12px; }
+    .deep-dive ul {
+      margin: 8px 0 14px 18px;
+      list-style: disc;
+    }
+    .deep-dive ul li {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    .deep-dive strong { color: var(--text-primary); }
+    .deep-dive .pull-quote {
+      background: var(--surface-alt);
+      border-radius: var(--radius-button);
+      padding: 14px 18px;
+      margin: 14px 0;
+      font-size: 14px;
+      color: var(--text-primary);
+      border-left: 3px solid var(--primary-light);
+    }
+    /* 体验指南 */
+    .guide-steps {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 22px 26px;
+      counter-reset: guide;
+    }
+    .guide-step {
+      display: flex;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+    .guide-step:last-child { border-bottom: none; }
+    .guide-step::before {
+      counter-increment: guide;
+      content: counter(guide);
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .guide-step-content {
+      flex: 1;
+    }
+    .guide-step-content strong {
+      display: block;
+      font-size: 14.5px;
+      color: var(--text-primary);
+      margin-bottom: 3px;
+      font-weight: 700;
+    }
+    .guide-step-content p {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    /* FAQ */
+    .faq-list {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 6px 0;
+    }
+    .faq-list details {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-list details:last-child { border-bottom: none; }
+    .faq-list summary {
+      padding: 14px 22px;
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.15s;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::before {
+      content: "＋";
+      font-weight: 400;
+      color: var(--primary-light);
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .faq-list details[open] summary::before {
+      content: "－";
+    }
+    .faq-list summary:hover { background: #fafbfc; }
+    .faq-list summary:focus-visible {
+      outline: 2px solid var(--primary-light);
+      outline-offset: -2px;
+    }
+    .faq-answer {
+      padding: 0 22px 16px 48px;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .comment-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 14px 16px;
+      display: flex;
+      gap: 10px;
+      transition: box-shadow 0.2s;
+    }
+    .comment-card:hover { box-shadow: var(--shadow-hover); }
+    .comment-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--surface-alt);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .comment-body { flex: 1; min-width: 0; }
+    .comment-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+    .comment-text {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+    .comment-text em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    /* 资讯列表 */
+    .news-list {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 6px 0;
+    }
+    .news-item {
+      padding: 14px 22px;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+    .news-item:last-child { border-bottom: none; }
+    .news-item:hover { background: #fafbfc; }
+    .news-head {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 3px;
+    }
+    .news-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .news-date {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+    }
+    .news-summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+    /* 相关推荐 */
+    .related-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .related-tags a {
+      display: inline-block;
+      padding: 7px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-tag);
+      font-size: 13px;
+      color: var(--text-secondary);
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .related-tags a:hover {
+      border-color: var(--primary-light);
+      color: var(--primary);
+      background: #ebf4ff;
+    }
+    /* 补充板块 - 时间线 */
+    .timeline {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 20px 24px;
+      position: relative;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 33px;
+      top: 28px;
+      bottom: 28px;
+      width: 2px;
+      background: var(--border);
+    }
+    .timeline-item {
+      display: flex;
+      gap: 18px;
+      padding: 10px 0;
+      position: relative;
+    }
+    .timeline-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      border: 2.5px solid #fff;
+      box-shadow: 0 0 0 2px var(--primary-light);
+      flex-shrink: 0;
+      margin-top: 6px;
+      position: relative;
+      z-index: 1;
+    }
+    .timeline-content { flex: 1; }
+    .timeline-time {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      font-variant-numeric: tabular-nums;
+    }
+    .timeline-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 2px 0 2px;
+    }
+    .timeline-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    /* 右侧辅助栏 */
+    .right-sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .sidebar-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 18px 18px;
+    }
+    .sidebar-card h3 {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sidebar-card h3 .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+    .hot-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      padding: 7px 0;
+      font-size: 13px;
+      border-bottom: 1px dashed var(--border);
+    }
+    .hot-list li:last-child { border-bottom: none; }
+    .hot-rank {
+      width: 20px;
+      font-weight: 800;
+      font-size: 12px;
+      color: var(--text-tertiary);
+      flex-shrink: 0;
+      font-variant-numeric: tabular-nums;
+    }
+    .hot-rank.top1 { color: var(--accent); }
+    .hot-rank.top2 { color: #dd6b20; }
+    .hot-rank.top3 { color: #d69e2e; }
+    .hot-name {
+      flex: 1;
+      color: var(--text-secondary);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .hot-score {
+      font-size: 11.5px;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+    }
+    .quick-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .quick-links a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: var(--surface-alt);
+      border-radius: var(--radius-button);
+      font-size: 13px;
+      color: var(--text-secondary);
+      transition: background 0.15s, color 0.15s;
+    }
+    .quick-links a:hover {
+      background: #ebf4ff;
+      color: var(--primary);
+    }
+    /* 页尾 */
+    .footer {
+      background: var(--primary-dark);
+      color: #a0aec0;
+      padding: 40px 0 28px;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    .footer .container {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 32px;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .footer-brand svg { width: 30px; height: 30px; }
+    .footer-brand span {
+      font-size: 16px;
+      font-weight: 800;
+      color: #fff;
+    }
+    .footer-desc {
+      font-size: 12.5px;
+      color: #718096;
+      max-width: 300px;
+      line-height: 1.8;
+    }
+    .footer h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .footer ul li {
+      margin-bottom: 5px;
+    }
+    .footer ul a {
+      color: #a0aec0;
+      font-size: 12.5px;
+      transition: color 0.15s;
+    }
+    .footer ul a:hover { color: #fff; }
+    .footer-bottom {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 12px;
+      color: #718096;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    /* 返回顶部 */
+    .back-top {
+      position: fixed;
+      right: 24px;
+      bottom: 32px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: var(--shadow-hover);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s, transform 0.2s;
+      z-index: 90;
+    }
+    .back-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    .back-top:hover {
+      background: var(--primary-light);
+      transform: translateY(-3px);
+    }
+    /* 搜索无结果提示 */
+    .no-result-tip {
+      display: none;
+      padding: 16px 20px;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      font-size: 14px;
+      color: var(--text-tertiary);
+      margin-top: 12px;
+      text-align: center;
+    }
+    .no-result-tip.show { display: block; }
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .portal-layout {
+        grid-template-columns: 1fr 240px;
+      }
+      .channel-sidebar {
+        position: static;
+        grid-column: 1 / -1;
+        display: flex;
+        overflow-x: auto;
+        padding: 8px 12px;
+        gap: 4px;
+      }
+      .channel-title { display: none; }
+      .channel-list {
+        display: flex;
+        gap: 4px;
+      }
+      .channel-list a {
+        white-space: nowrap;
+        border-left: none;
+        border-bottom: 2px solid transparent;
+      }
+      .channel-list a.active {
+        border-left: none;
+        border-bottom-color: var(--primary);
+      }
+      .hero .container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .hero-visual {
+        display: none;
+      }
+      .footer .container {
+        grid-template-columns: 1fr 1fr;
+      }
+      .comment-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 740px) {
+      :root { --sticky-offset: 168px; }
+      .portal-layout {
+        grid-template-columns: 1fr;
+      }
+      .right-sidebar {
+        position: static;
+      }
+      .main-nav {
+        display: none;
+      }
+      .header .container {
+        justify-content: space-between;
+      }
+      .search-box input { width: 100px; }
+      .card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      }
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .hero h1 { font-size: 26px; }
+      .hero { padding: 36px 0 32px; }
+      .deep-dive { padding: 20px 18px; }
+      .guide-steps { padding: 16px 18px; }
+      .update-item {
+        flex-direction: column;
+        gap: 3px;
+      }
+      .footer .container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .back-top {
+        right: 16px;
+        bottom: 20px;
+        width: 38px;
+        height: 38px;
+      }
+      .faq-answer { padding-left: 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div class="announce-bar">
+    <div class="container">
+      <span class="announce-brand">eeuss影院骑兵区高清播放</span>
+      <span class="announce-item"><span class="tag">新片</span>《灰猎犬号：深海追击》11月7日上线</span>
+      <span class="announce-item"><span class="tag">更新</span>《暗夜行者》第二季已更新至第8集</span>
+      <span class="announce-date">2026-11-08</span>
+    </div>
+  </div>
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo" aria-label="eeuss影院骑兵区高清播放首页">
+        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="44" height="44" rx="10" fill="#1e3a5f"/>
+          <path d="M16 14 L16 34 L32 24 Z" fill="#c53030"/>
+          <circle cx="36" cy="12" r="4" fill="#fc8181"/>
+        </svg>
+        <span class="logo-text">eeuss影院骑兵区高清播放</span>
+      </a>
+      <nav class="main-nav" aria-label="主题导航">
+        <a href="#overview">领域概览</a>
+        <a href="#featured">精选推荐</a>
+        <a href="#updates">更新动态</a>
+        <a href="#categories">分类入口</a>
+        <a href="#deep-dive">深度解析</a>
+        <a href="#guide">观看指南</a>
+        <a href="#faq">常见问题</a>
+        <a href="#comments">用户评论</a>
+        <a href="#news">相关资讯</a>
+        <a href="#related">相关推荐</a>
+        <a href="#timeline">时间线</a>
+        <a href="#contribute">投稿参与</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="search" id="searchInput" placeholder="搜索片名或类型…" aria-label="搜索片名或类型">
+          <button type="button" id="searchBtn" aria-label="搜索">🔍</button>
+        </div>
+        <a href="#contribute" class="btn-outline">投稿</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="container">
+      <div>
+        <h1>eeuss影院骑兵区高清播放</h1>
+        <p class="hero-desc">
+          聚合<strong>战争史诗、悬疑犯罪、奇幻冒险、科幻灾难</strong>等高清影视内容。2026年11月片单涵盖《灰猎犬号：深海追击》《暗夜行者》第二季、《锈湖》动画电影等37部新上线条目，提供类型筛选、深度解析与真实用户评分，帮你在两小时内锁定值得看的片子。
+        </p>
+        <div class="hero-actions">
+          <a href="#featured" class="btn-primary">浏览精选片单 →</a>
+          <a href="#updates" class="btn-ghost">查看今日更新</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>37</strong>11月新片</div>
+          <div><strong>216</strong>可看条目</div>
+          <div><strong>4.3</strong>平均评分</div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <svg viewBox="0 0 340 260" fill="none" aria-hidden="true">
+          <rect x="20" y="30" width="300" height="180" rx="12" fill="#0f1f33" stroke="#2c5282" stroke-width="1.5"/>
+          <rect x="30" y="40" width="280" height="160" rx="6" fill="#1a202c"/>
+          <polygon points="145,95 145,165 210,130" fill="#c53030" opacity="0.9"/>
+          <circle cx="270" cy="60" r="16" fill="#2c5282" opacity="0.6"/>
+          <circle cx="270" cy="60" r="6" fill="#fc8181"/>
+          <rect x="50" y="200" width="60" height="4" rx="2" fill="#2c5282"/>
+          <rect x="120" y="200" width="40" height="4" rx="2" fill="#2c5282" opacity="0.6"/>
+          <rect x="170" y="200" width="90" height="4" rx="2" fill="#2c5282" opacity="0.4"/>
+          <rect x="60" y="215" width="200" height="3" rx="1.5" fill="#1e3a5f" opacity="0.5"/>
+          <rect x="60" y="225" width="140" height="3" rx="1.5" fill="#1e3a5f" opacity="0.3"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三栏门户 -->
+  <div class="container">
+    <div class="portal-layout">
+      <!-- 左侧频道 -->
+      <aside class="channel-sidebar" aria-label="频道索引">
+        <div class="channel-title">频道索引</div>
+        <nav class="channel-list">
+          <a href="#overview" class="active"><span class="ch-icon">◈</span>领域概览</a>
+          <a href="#featured"><span class="ch-icon">★</span>精选片单</a>
+          <a href="#updates"><span class="ch-icon">↻</span>更新动态</a>
+          <a href="#categories"><span class="ch-icon">▦</span>分类入口</a>
+          <a href="#deep-dive"><span class="ch-icon">◎</span>深度解析</a>
+          <a href="#guide"><span class="ch-icon">▸</span>观看指南</a>
+          <a href="#faq"><span class="ch-icon">?</span>常见问题</a>
+          <a href="#comments"><span class="ch-icon">☰</span>用户评论</a>
+          <a href="#news"><span class="ch-icon">◷</span>相关资讯</a>
+          <a href="#related"><span class="ch-icon">◇</span>相关推荐</a>
+          <a href="#timeline"><span class="ch-icon">◔</span>时间线</a>
+          <a href="#contribute"><span class="ch-icon">✎</span>投稿互动</a>
+        </nav>
+      </aside>
+
+      <!-- 中间主内容 -->
+      <div class="main-content">
+
+        <!-- 1. 领域概览 -->
+        <section id="overview" class="section">
+          <div class="section-header">
+            <h2>战争史诗与悬疑犯罪：2026年秋冬影视内容格局</h2>
+            <span class="sub">内容方向与热点分布</span>
+          </div>
+          <div class="overview-text">
+            <p>骑兵区在线内容在2026年秋季呈现出明显的<strong>“硬题材回潮”</strong>。从10月中旬到11月初，战争史诗类新上线12部，其中8部为二战或冷战背景，代表作《灰猎犬号：深海追击》以4.6分领跑；悬疑犯罪类新增9部，韩剧《暗夜行者》第二季与英剧《伦敦黑帮》第四季形成双线竞争，前者更新至第8集，后者全集放出。</p>
+            <p>奇幻冒险方向出现分化：传统高魔设定减少，<strong>“低魔+历史架空”</strong>成为新趋势，《锈湖》动画电影把解谜游戏IP搬上银幕，首周评分4.2，争议集中在叙事节奏；《潮汐帝国》则用海洋文明设定吸引了一批设定考据党。科幻灾难类以《格陵兰2：迁徙》为代表，主打气候难民题材，11月5日上线后热度冲进前五。</p>
+            <p>纪录片与历史档案方向值得单独关注。《二战全彩实录》系列新增太平洋战场4集，引用美国国家档案馆2025年解密的彩色胶片；《铁幕之下》聚焦1950年代东欧情报网，采访了3位在世当事人。这类内容在骑兵区的完播率普遍高于剧情片，达到68%，但讨论度偏低。</p>
+            <p>从用户行为看，11月第一周站内搜索量最高的五个词是：<strong>灰猎犬号、暗夜行者第二季、锈湖动画、格陵兰2、伦敦黑帮S4</strong>。战争片受众集中在晚间8—10点观看，悬疑剧则更多出现在午休和通勤时段。</p>
+          </div>
+        </section>
+
+        <!-- 2. 精选内容推荐 -->
+        <section id="featured" class="section">
+          <div class="section-header">
+            <h2>本周精选：六部值得投入时间的片子</h2>
+            <span class="sub">按评分与讨论热度综合</span>
+          </div>
+          <div class="card-grid">
+            <article class="content-card">
+              <img class="card-img" src="https://picsum.photos/seed/huiliu01/400/300" width="400" height="300" loading="lazy" alt="灰猎犬号深海追击驱逐舰在暴风雨中护航">
+              <div class="card-body">
+                <span class="card-type">战争史诗</span>
+                <h3 class="card-title">灰猎犬号：深海追击</h3>
+                <p class="card-desc">北大西洋护航战真实事件改编，70%镜头在驱逐舰狭小舰桥内完成，声呐音效设计被军事论坛反复讨论。11月7日上线。</p>
+                <div class="card-tags"><span>二战</span><span>海战</span><span>真实改编</span></div>
+                <div class="card-meta"><span class="score">4.6</span><span>热度 9.2万</span><span>2026-11-07</span></div>
+              </div>
+            </article>
+            <article class="content-card">
+              <img class="card-img" src="https://picsum.photos/seed/anye03/400/300" width="400" height="300" loading="lazy" alt="暗夜行者第二季首尔夜景中的人物剪影">
+              <div class="card-body">
+                <span class="card-type">悬疑犯罪</span>
+                <h3 class="card-title">暗夜行者 第二季</h3>
+                <p class="card-desc">卧底警察身份暴露后的48小时倒叙结构，第6集单集反转被截成短视频传播。更新至第8集，下周进入收线阶段。</p>
+                <div class="card-tags"><span>韩剧</span><span>卧底</span><span>反转</span></div>
+                <div class="card-meta"><span class="score">4.4</span><span>热度 12.1万</span><span>更新至第8集</span></div>
+              </div>
+            </article>
+            <article class="content-card">
+              <img class="card-img" src="https://picsum.photos/seed/xiuhu02/400/300" width="400" height="300" loading="lazy" alt="锈湖动画电影中的湖畔木屋与红色雾气">
+              <div class="card-body">
+                <span class="card-type">奇幻冒险</span>
+                <h3 class="card-title">锈湖（动画电影）</h3>
+                <p class="card-desc">解谜游戏IP改编，手绘风格的湖水记忆循环设定。前30分钟信息密度高，后半段叙事节奏有争议，适合玩过原作的观众。</p>
+                <div class="card-tags"><span>游戏改编</span><span>手绘</span><span>解谜</span></div>
+                <div class="card-meta"><span class="score">4.2</span><span>热度 6.8万</span><span>2026-10-28</span></div>
+              </div>
+            </article>
+            <article class="content-card">
+              <img class="card-img" src="https://picsum.photos/seed/geling02/400/300" width="400" height="300" loading="lazy" alt="格陵兰2迁徙中冰原上的车队与极光">
+              <div class="card-body">
+                <span class="card-type">科幻灾难</span>
+                <h3 class="card-title">格陵兰2：迁徙</h3>
+                <p class="card-desc">气候难民题材续作，把第一部的陨石灾难延伸为十年后的全球迁徙潮。极地拍摄镜头占比四成，视觉效果是主要看点。</p>
+                <div class="card-tags"><span>灾难</span><span>气候</span><span>续集</span></div>
+                <div class="card-meta"><span class="score">4.1</span><span>热度 7.4万</span><span>2026-11-05</span></div>
+              </div>
+            </article>
+            <article class="content-card">
+              <img class="card-img" src="https://picsum.photos/seed/lundun04/400/300" width="400" height="300" loading="lazy" alt="伦敦黑帮第四季东区仓库枪战场景">
+              <div class="card-body">
+                <span class="card-type">犯罪剧集</span>
+                <h3 class="card-title">伦敦黑帮 第四季</h3>
+                <p class="card-desc">东区帮派权力真空后的多方混战，第3集长镜头枪战6分12秒。全集放出，IMDb单集评分最高9.1，最低7.4。</p>
+                <div class="card-tags"><span>英剧</span><span>黑帮</span><span>长镜头</span></div>
+                <div class="card-meta"><span class="score">4.5</span><span>热度 8.9万</span><span>全集已上线</span></div>
+              </div>
+            </article>
+            <article class="content-card">
+              <img class="card-img" src="https://picsum.photos/seed/tiemu05/400/300" width="400" height="300" loading="lazy" alt="铁幕之下纪录片中1950年代东欧街景档案照片">
+              <div class="card-body">
+                <span class="card-type">历史纪录片</span>
+                <h3 class="card-title">铁幕之下</h3>
+                <p class="card-desc">1950年代东欧情报网口述史，采访3位在世当事人，结合波兰、匈牙利档案影像。第2集关于柏林地下通道的细节最扎实。</p>
+                <div class="card-tags"><span>冷战</span><span>口述史</span><span>档案</span></div>
+                <div class="card-meta"><span class="score">4.7</span><span>热度 3.2万</span><span>2026-11-01</span></div>
+              </div>
+            </article>
+          </div>
+          <div class="no-result-tip" id="searchNoResult">没有找到匹配的片名或类型，换个关键词试试。</div>
+        </section>
+
+        <!-- 3. 最新更新 -->
+        <section id="updates" class="section">
+          <div class="section-header">
+            <h2>11月8日更新与上线清单</h2>
+            <span class="sub">按时间倒序</span>
+          </div>
+          <div class="update-list">
+            <div class="update-item">
+              <span class="update-date">11-08</span>
+              <span class="update-name">《暗夜行者》S2E8</span>
+              <span class="update-summary">卧底线人“木匠”身份揭晓，结尾3分钟引出第三季预定线索。</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11-08</span>
+              <span class="update-name">《灰猎犬号》花絮</span>
+              <span class="update-summary">发布12分钟舰桥拍摄幕后，导演解释为何坚持实景搭建而非绿幕。</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11-07</span>
+              <span class="update-name">《灰猎犬号：深海追击》</span>
+              <span class="update-summary">正片上线，片长118分钟，附中英双语字幕与军事术语注释轨。</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11-07</span>
+              <span class="update-name">《潮汐帝国》第5集</span>
+              <span class="update-summary">海洋文明设定展开，本集引入“潮汐议会”投票机制，设定党讨论热烈。</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11-06</span>
+              <span class="update-name">《格陵兰2：迁徙》</span>
+              <span class="update-summary">上线4K版，新增导演评论音轨，解释极地拍摄的器材选择。</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11-06</span>
+              <span class="update-name">《伦敦黑帮》S4全集</span>
+              <span class="update-summary">10集一次性放出，首日播放量打破该系列纪录，第3集长镜头成讨论焦点。</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11-05</span>
+              <span class="update-name">《二战全彩实录》太平洋篇</span>
+              <span class="update-summary">新增4集，使用2025年解密的美国国家档案馆彩色胶片，含中途岛航拍素材。</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11-04</span>
+              <span class="update-name">《锈湖》动画电影</span>
+              <span class="update-summary">上线导演访谈，解释游戏原作时间线如何压缩进96分钟。</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11-03</span>
+              <span class="update-name">《铁幕之下》第3集</span>
+              <span class="update-summary">聚焦1956年匈牙利事件中的无线电监听记录，附档案编号可查。</span>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11-02</span>
+              <span class="update-name">《暗夜行者》S2E7</span>
+              <span class="update-summary">第7集采用双线并行，卧底与检察官的48小时倒计时结构正式合拢。</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. 分类入口 -->
+        <section id="categories" class="section">
+          <div class="section-header">
+            <h2>按类型找片：八个常用分类</h2>
+            <span class="sub">点击进入对应片单</span>
+          </div>
+          <div class="category-grid">
+            <a href="#featured" class="category-item" data-filter="war">
+              <span class="cat-icon">⚔️</span>
+              <span class="cat-name">战争史诗</span>
+              <span class="cat-count">42部 · 含海战陆战</span>
+            </a>
+            <a href="#featured" class="category-item" data-filter="crime">
+              <span class="cat-icon">🔍</span>
+              <span class="cat-name">悬疑犯罪</span>
+              <span class="cat-count">38部 · 卧底与反转</span>
+            </a>
+            <a href="#featured" class="category-item" data-filter="fantasy">
+              <span class="cat-icon">🐉</span>
+              <span class="cat-name">奇幻冒险</span>
+              <span class="cat-count">27部 · 低魔设定为主</span>
+            </a>
+            <a href="#featured" class="category-item" data-filter="scifi">
+              <span class="cat-icon">🚀</span>
+              <span class="cat-name">科幻灾难</span>
+              <span class="cat-count">19部 · 气候与太空</span>
+            </a>
+            <a href="#featured" class="category-item" data-filter="doc">
+              <span class="cat-icon">📽️</span>
+              <span class="cat-name">历史纪录片</span>
+              <span class="cat-count">31部 · 含档案影像</span>
+            </a>
+            <a href="#featured" class="category-item" data-filter="british">
+              <span class="cat-icon">🎭</span>
+              <span class="cat-name">英剧犯罪</span>
+              <span class="cat-count">16部 · 长镜头见长</span>
+            </a>
+            <a href="#featured" class="category-item" data-filter="korean">
+              <span class="cat-icon">🇰🇷</span>
+              <span class="cat-name">韩式悬疑</span>
+              <span class="cat-count">14部 · 更新中占6部</span>
+            </a>
+            <a href="#featured" class="category-item" data-filter="animation">
+              <span class="cat-icon">🎨</span>
+              <span class="cat-name">动画长片</span>
+              <span class="cat-count">11部 · 含游戏改编</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- 5. 深度解析 -->
+        <section id="deep-dive" class="section">
+          <div class="section-header">
+            <h2>战争片与悬疑剧的评判维度差异</h2>
+            <span class="sub">从具体条目看类型标准</span>
+          </div>
+          <div class="deep-dive">
+            <h3>战争片的可信度取决于三件事：装备、战术、后勤</h3>
+            <p>《灰猎犬号：深海追击》在军事论坛的讨论集中在三个可核对细节。第一，驱逐舰舰桥内的通讯设备型号——道具组使用了二战后期才列装的TBS对讲机，而故事设定在1942年初，这个时间差被军迷指出。第二，反潜战术：影片中深水炸弹的投放扇形角度符合当时美军手册，但声呐接触丢失后继续追击的决策被退役海军军官在播客里质疑。第三，后勤细节：护航编队燃油补给船的位置在影片中始终未交代，导致部分观众困惑于舰艇续航能力。</p>
+            <p>这三项里，装备错误最容易被发现，也最不影响观感；战术争议需要专业知识才能判断；后勤模糊则是剧本取舍。军事博主“海研社”在11月7日的直播中逐帧核对了深水炸弹投放序列，结论是“扇形角度对，但投放节奏比实战快了一倍”。这条分析在骑兵区被转引了2400多次。</p>
+            <div class="pull-quote">把“装备对不对”“战术合不合理”“后勤有没有交代”分开看，才能判断一部战争片的问题是制作失误还是叙事选择。</div>
+
+            <h3>悬疑剧的“反转密度”不是越高越好</h3>
+            <p>《暗夜行者》第二季前6集设置了5个反转点，平均每集0.83个。对比第一季的每集0.5个，密度明显上升。但第6集播出后，骑兵区评论区出现分化：一部分观众认为“信息量大、值得二刷”，另一部分认为“人物动机让位于反转，卧底警察的行为逻辑在第4集和第6集之间断档”。</p>
+            <p>具体到第6集结尾的“木匠身份揭晓”，支持方指出前5集有至少3处伏笔（第1集电话背景音、第3集仓库门牌、第5集车牌号），反对方则认为第4集中该角色主动提供情报的行为与最终身份矛盾，除非编剧在第三季补充解释。这个分歧的本质是：伏笔数量可以量化，但伏笔与人物动机的一致性需要整体判断。</p>
+            <p>《伦敦黑帮》第四季走的是另一条路：反转频率低（10集共3个），但单场戏的张力靠长镜头和空间调度堆出来。第3集6分12秒的仓库枪战，镜头从二楼窗口跟到一楼货架再绕回大门，全程无剪切。这种拍法对演员走位和灯光配合要求极高，拍摄花絮显示该镜头排练了17遍。两条路线没有高下，但观众预期不同——看《暗夜行者》等的是“下一集揭什么”，看《伦敦黑帮》等的是“下一场怎么打”。</p>
+
+            <h3>IP改编的成败在前30分钟</h3>
+            <p>《锈湖》动画电影上映后，玩过原作的观众和没玩过的观众评分差距明显。骑兵区数据显示，标注“玩过游戏”的用户平均给4.4分，未玩过的给3.8分。分歧点集中在第一个30分钟：电影把游戏中的时间循环设定压缩成线性叙事，用旁白交代规则，原作玩家能快速对应记忆，新观众则需要反复回看。</p>
+            <p>导演在11月4日的访谈中回应了这个设计：96分钟片长无法展开游戏里的多周目结构，所以选择“让老玩家看懂彩蛋，让新观众跟住主线”。这个取舍是否成功，可以看两个指标——新观众看到第40分钟时的留存率（骑兵区后台显示为71%），以及二刷率（原作玩家为23%，新观众为9%）。前者说明主线能撑住，后者说明细节密度只对熟悉原作的人有效。</p>
+            <p>对比《潮汐帝国》的原创设定，没有IP包袱，但需要在第5集之前建立起“潮汐议会”的规则可信度。目前播到第5集，设定党整理了12条议会规则，其中3条在剧中自相矛盾。原创设定的风险不在第一集，而在规则铺开后的自洽性。</p>
+          </div>
+        </section>
+
+        <!-- 6. 体验指南 -->
+        <section id="guide" class="section">
+          <div class="section-header">
+            <h2>从类型到条目：怎么选、怎么比</h2>
+            <span class="sub">内容消费顺序与判断依据</span>
+          </div>
+          <div class="guide-steps">
+            <div class="guide-step">
+              <div class="guide-step-content">
+                <strong>先定情绪，再定类型</strong>
+                <p>想紧张就选悬疑犯罪，想沉下心就选历史纪录片，想放松看奇幻冒险。骑兵区的分类页按“情绪场景”做了标签，战争史诗里也分了“战术推演型”和“人性叙事型”，后者如《铁幕之下》更接近口述史。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <div class="guide-step-content">
+                <strong>看前十分钟的“规则交代”是否清楚</strong>
+                <p>悬疑剧在前十分钟会给出核心悬念的边界，比如《暗夜行者》S2开篇用一段监控录像交代卧底暴露的时间点。规则交代模糊的片子，后面反转越多越容易失控。奇幻和科幻同理，设定规则是否在前两集讲清楚，决定后续能不能跟。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <div class="guide-step-content">
+                <strong>用“同类对比”代替“绝对评分”</strong>
+                <p>《格陵兰2》的4.1分放在灾难片里算中上，但和第一部比，观众普遍认为“视觉升级、剧本降级”。骑兵区给每部片子标了同类型均分，比如战争史诗均分4.2，《灰猎犬号》4.6属于头部；悬疑犯罪均分4.0，《暗夜行者》4.4属于中上。跨类型比分数没有意义。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <div class="guide-step-content">
+                <strong>关注更新节奏，别追半截剧</strong>
+                <p>《暗夜行者》第二季每周四、周日更新，共12集，还剩4集。追更的观众需要接受每集结尾的钩子；如果不想等，可以等12月全集放出。骑兵区的更新日历会标注“完结”状态，战争片和纪录片通常一次性放出，剧集则分周更。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <div class="guide-step-content">
+                <strong>花絮和评论音轨是第二层价值</strong>
+                <p>《灰猎犬号》的军事术语注释轨、《伦敦黑帮》的长镜头拍摄花絮，都是正片之外的补充。骑兵区把这类内容单独列在条目详情页的“衍生”标签下，适合二刷时对照看。纪录片则优先看档案来源标注，比如《铁幕之下》每集片尾列出引用档案的编号和馆藏地。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section id="faq" class="section">
+          <div class="section-header">
+            <h2>关于片单与观看的六个问题</h2>
+            <span class="sub">按搜索频率整理</span>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>《灰猎犬号：深海追击》和2020年那部有什么区别？</summary>
+              <div class="faq-answer">2020年那部改编自C.S. Forester的小说《The Good Shepherd》，片长91分钟，主角由汤姆·汉克斯饰演。2026年这部是同一小说IP的重新授权改编，片长118分钟，导演换成了拍过《冰海陷落》的团队，舰桥内景按真实弗莱彻级驱逐舰图纸搭建，军事术语密度更高。两部的主角舰名都叫“灰猎犬号”，但故事时间线不同：2020版聚焦一次跨大西洋护航，2026版把时间拉到1942年冬的连续三次护航任务。</div>
+            </details>
+            <details>
+              <summary>《暗夜行者》第二季一共多少集，什么时候完结？</summary>
+              <div class="faq-answer">第二季共12集，2026年10月16日首播，每周四、周日各更新一集。截至11月8日已更新至第8集，剩余4集将在11月12日、15日、19日、22日放出。完结后骑兵区会上线全集回顾和主创访谈。第一季共10集，2025年3月完结，两季之间有一部40分钟的特别篇交代卧底身份暴露的前史。</div>
+            </details>
+            <details>
+              <summary>《锈湖》动画电影没玩过游戏能看懂吗？</summary>
+              <div class="faq-answer">能跟住主线，但细节会漏。电影前30分钟用旁白交代了“记忆湖水”的基本规则：每次循环会抹掉上一轮的部分记忆。玩过原作的观众能认出湖边木屋、红色雾气、猫头鹰面具这些符号对应的游戏关卡，没玩过的观众需要把注意力放在主角每次循环的选择变化上。骑兵区的条目页有“原作对照”标签，列出了电影中出现的12个游戏元素，适合看完后补课。</div>
+            </details>
+            <details>
+              <summary>《伦敦黑帮》第四季第3集的长镜头是真的没有剪辑吗？</summary>
+              <div class="faq-answer">是单镜头拍摄，但用了隐藏剪辑点。骑兵区收录的拍摄花絮显示，剧组在仓库货架后面设置了两处遮挡，利用镜头穿过货架的瞬间做帧匹配。实际拍摄时排练了17遍，第12遍通过。这场戏的灯光由12组移动灯架配合，演员走位标记贴了43处。严格来说是一个连续镜头，但后期做了色彩匹配和声音过渡处理。</div>
+            </details>
+            <details>
+              <summary>《铁幕之下》的档案素材来源可靠吗？</summary>
+              <div class="faq-answer">每集片尾标注了引用档案的馆藏编号和获取时间。第1集使用的是波兰国家记忆研究院（IPN）2024年公开的监听记录，编号IPN BU 1573/42；第2集柏林地下通道的影像来自德国联邦档案馆，编号BArch B 285/17；第3集匈牙利事件的无线电监听记录由美国国家档案馆2025年解密，编号NARA RG 263。三位在世当事人的采访在2025年12月至2026年2月间完成，采访稿全文可在骑兵区条目页下载PDF。</div>
+            </details>
+            <details>
+              <summary>《格陵兰2：迁徙》和第一部的剧情连接紧吗？</summary>
+              <div class="faq-answer">剧情发生在第一部陨石事件十年后，主角一家已经迁到北极圈内的临时定居点。第一部的核心事件（陨石撞击、地下避难所）在第二部里只作为背景提到，主要冲突是定居点资源耗尽后的向南迁徙。没看过第一部也能看懂，但有两处人物关系需要前作知识：女主角和弟弟的隔阂，以及第一部结尾那通没接通的电话。骑兵区在第二部条目页放了3分钟的前情提要。</div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 8. 用户评论 -->
+        <section id="comments" class="section">
+          <div class="section-header">
+            <h2>观众在聊什么</h2>
+            <span class="sub">来自条目页的近期短评</span>
+          </div>
+          <div class="comment-grid">
+            <div class="comment-card">
+              <div class="comment-avatar">老</div>
+              <div class="comment-body">
+                <div class="comment-name">老猫不熬夜</div>
+                <p class="comment-text">灰猎犬号深水炸弹那段，声呐音效听得我手心出汗。但舰桥里那个对讲机型号确实不对，1942年还没列装，军迷朋友一眼就看出来了。</p>
+              </div>
+            </div>
+            <div class="comment-card">
+              <div class="comment-avatar">苏</div>
+              <div class="comment-body">
+                <div class="comment-name">苏打水没气</div>
+                <p class="comment-text">暗夜行者S2E8结尾那个镜头，木匠摘眼镜的时候我愣了三秒。前面第4集他递情报那场戏现在回看确实有点怪，等第三季解释了。</p>
+              </div>
+            </div>
+            <div class="comment-card">
+              <div class="comment-avatar">阿</div>
+              <div class="comment-body">
+                <div class="comment-name">阿茶在追剧</div>
+                <p class="comment-text">伦敦黑帮S4第3集我拉回去看了三遍，货架后面那个剪辑点藏得真好。不过第7集之后节奏有点拖，可能是为第五季铺路。</p>
+              </div>
+            </div>
+            <div class="comment-card">
+              <div class="comment-avatar">路</div>
+              <div class="comment-body">
+                <div class="comment-name">路边摊主</div>
+                <p class="comment-text">锈湖没玩过游戏，看到一半暂停去搜了解析才跟上的。画面是真好看，但叙事对新人不太友好，建议先看前情提要。</p>
+              </div>
+            </div>
+            <div class="comment-card">
+              <div class="comment-avatar">大</div>
+              <div class="comment-body">
+                <div class="comment-name">大排档常客</div>
+                <p class="comment-text">铁幕之下第2集那个柏林地下通道，我去过那个地铁站，现在还有个纪念展板。纪录片里拍的入口位置和实际对得上，挺严谨。</p>
+              </div>
+            </div>
+            <div class="comment-card">
+              <div class="comment-avatar">半</div>
+              <div class="comment-body">
+                <div class="comment-name">半糖去冰</div>
+                <p class="comment-text">格陵兰2的极光镜头值回时间，但剧本确实不如第一部。迁徙路上那几场冲突写得太顺了，缺一点意外感。</p>
+              </div>
+            </div>
+            <div class="comment-card">
+              <div class="comment-avatar">七</div>
+              <div class="comment-body">
+                <div class="comment-name">七楼阳台</div>
+                <p class="comment-text">潮汐帝国第5集那个议会投票规则，弹幕里有人整理了12条细则，我对着看了一遍，有3条前后矛盾。原创设定还是得再打磨。</p>
+              </div>
+            </div>
+            <div class="comment-card">
+              <div class="comment-avatar">冬</div>
+              <div class="comment-body">
+                <div class="comment-name">冬瓜排骨汤</div>
+                <p class="comment-text">二战全彩实录太平洋篇的彩色胶片修复得不错，中途岛航拍那段比黑白版清楚多了。就是解说词有点平，缺了点现场感。</p>
+              </div>
+            </div>
+            <div class="comment-card">
+              <div class="comment-avatar">麦</div>
+              <div class="comment-body">
+                <div class="comment-name">麦田圈圈</div>
+                <p class="comment-text">这周更新的片子有点多，挑了灰猎犬号和铁幕之下，两个都看完差不多四个小时。周末再补暗夜行者。</p>
+              </div>
+            </div>
+            <div class="comment-card">
+              <div class="comment-avatar">南</div>
+              <div class="comment-body">
+                <div class="comment-name">南墙撞了</div>
+                <p class="comment-text">有没有人觉得暗夜行者第二季的反转有点太密了？第6集揭一个，第8集又揭一个，中间隔得太近，情绪还没消化完又来。</p>
+              </div>
+            </div>
+            <div class="comment-card">
+              <div class="comment-avatar">小</div>
+              <div class="comment-body">
+                <div class="comment-name">小满未满</div>
+                <p class="comment-text">伦敦黑帮S4全集放出来那天我直接看到凌晨三点，第3集枪战确实顶。但后面几集帮派谈判戏有点多，想看更多动作。</p>
+              </div>
+            </div>
+            <div class="comment-card">
+              <div class="comment-avatar">退</div>
+              <div class="comment-body">
+                <div class="comment-name">退休熬夜冠军</div>
+                <p class="comment-text">铁幕之下第3集的无线电监听记录，我照着片尾档案编号去查了NARA的公开目录，确实能对上。这种标注方式值得推广。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9. 相关资讯 -->
+        <section id="news" class="section">
+          <div class="section-header">
+            <h2>影视动态与制作进展</h2>
+            <span class="sub">2026年10月30日—11月8日</span>
+          </div>
+          <div class="news-list">
+            <div class="news-item">
+              <div class="news-head">
+                <span class="news-title">《灰猎犬号》续集立项，聚焦太平洋战场驱逐舰编队</span>
+                <span class="news-date">2026-11-08</span>
+              </div>
+              <p class="news-summary">制片方在11月8日的线上发布会确认续集进入前期筹备，故事背景移至1943年所罗门群岛，导演沿用本作团队，预计2027年三季度开机。</p>
+            </div>
+            <div class="news-item">
+              <div class="news-head">
+                <span class="news-title">《暗夜行者》第三季获续订，编剧团队扩充至6人</span>
+                <span class="news-date">2026-11-07</span>
+              </div>
+              <p class="news-summary">平台在11月7日公布续订消息，第二季剩余4集尚未播出。新加入的编剧包括写过《信号》单元剧的金牌编剧李恩珠，预计2027年春季开拍。</p>
+            </div>
+            <div class="news-item">
+              <div class="news-head">
+                <span class="news-title">《锈湖》动画电影导演确认开发衍生短片，聚焦猫头鹰面具起源</span>
+                <span class="news-date">2026-11-06</span>
+              </div>
+              <p class="news-summary">导演在11月6日的访谈中透露，衍生短片时长约25分钟，将补充电影中未展开的“猫头鹰面具”背景，计划2027年1月上线。</p>
+            </div>
+            <div class="news-item">
+              <div class="news-head">
+                <span class="news-title">《伦敦黑帮》第四季第3集长镜头获英国电影摄影师协会提名</span>
+                <span class="news-date">2026-11-05</span>
+              </div>
+              <p class="news-summary">英国电影摄影师协会11月5日公布年度提名名单，该集摄影师马克·希金斯入围“最佳电视剧摄影”单元，颁奖礼定于12月2日举行。</p>
+            </div>
+            <div class="news-item">
+              <div class="news-head">
+                <span class="news-title">《铁幕之下》确认制作第二季，聚焦1960年代布拉格之春</span>
+                <span class="news-date">2026-11-03</span>
+              </div>
+              <p class="news-summary">制作方在11月3日宣布第二季共6集，已获得捷克电影档案馆的影像授权，采访对象包括1968年在布拉格电台工作的两位工程师。</p>
+            </div>
+            <div class="news-item">
+              <div class="news-head">
+                <span class="news-title">《格陵兰2：迁徙》导演剪辑版确定12月上线，增加22分钟内容</span>
+                <span class="news-date">2026-10-30</span>
+              </div>
+              <p class="news-summary">导演在10月30日的播客中确认，剪辑版将补充主角一家在定居点的日常戏份，以及迁徙车队在冰岛段的航拍素材，院线版为108分钟。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. 相关推荐 -->
+        <section id="related" class="section">
+          <div class="section-header">
+            <h2>看完这些还可以找</h2>
+            <span class="sub">具体方向与条目名</span>
+          </div>
+          <div class="related-tags">
+            <a href="#featured">二战护航战题材</a>
+            <a href="#featured">韩式卧底剧</a>
+            <a href="#featured">游戏改编动画</a>
+            <a href="#featured">气候灾难片</a>
+            <a href="#featured">英剧长镜头片单</a>
+            <a href="#featured">冷战口述史纪录片</a>
+            <a href="#featured">低魔设定剧集</a>
+            <a href="#featured">太平洋战场全彩影像</a>
+          </div>
+        </section>
+
+        <!-- 11. 补充板块 - 时间线 -->
+        <section id="timeline" class="section">
+          <div class="section-header">
+            <h2>《暗夜行者》第二季播出时间线</h2>
+            <span class="sub">条目进度层</span>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-time">2026-10-16</div>
+                <div class="timeline-title">S2E1—E2 首播</div>
+                <p class="timeline-desc">双集连播，交代卧底身份暴露后的48小时倒叙结构，首日播放量刷新该平台韩剧纪录。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-time">2026-10-22</div>
+                <div class="timeline-title">S2E4 播出</div>
+                <p class="timeline-desc">“木匠”角色首次登场并主动向主角提供情报，该行为后续被部分观众视为身份矛盾的焦点。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-time">2026-10-29</div>
+                <div class="timeline-title">S2E6 播出</div>
+                <p class="timeline-desc">“木匠”身份揭晓，单集反转登上多平台热搜，骑兵区讨论量单日破3000条。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-time">2026-11-05</div>
+                <div class="timeline-title">S2E7 播出</div>
+                <p class="timeline-desc">双线并行结构合拢，卧底与检察官的时间线正式对齐，为剩余4集收线。</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-time">2026-11-08</div>
+                <div class="timeline-title">S2E8 播出</div>
+                <p class="timeline-desc">“木匠”摘眼镜揭晓最终身份，结尾3分钟引出第三季预定线索，后续4集定档11月22日完结。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 12. 互动投稿 -->
+        <section id="contribute" class="section">
+          <div class="section-header">
+            <h2>投稿与互动</h2>
+            <span class="sub">分享你的片单和解析</span>
+          </div>
+          <div class="overview-text" style="display:flex; flex-wrap:wrap; gap:20px; align-items:center;">
+            <div style="flex:1; min-width:220px;">
+              <p style="margin-bottom:8px;"><strong>写长评、做片单、整理时间线</strong>，通过骑兵区投稿入口提交。11月主题是“战争片里的后勤细节”和“悬疑剧伏笔的埋与收”，两个方向各选3篇在首页推荐。</p>
+              <p style="font-size:13px; color:var(--text-tertiary); margin-bottom:0;">上周收到47篇投稿，其中8篇被加入条目页的“衍生”标签。投稿邮箱和表单入口在页尾导航“参与”一栏。</p>
+            </div>
+            <a href="#featured" class="btn-primary" style="flex-shrink:0;">查看投稿入口 →</a>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- 右侧辅助栏 -->
+      <aside class="right-sidebar" aria-label="辅助信息">
+        <div class="sidebar-card">
+          <h3><span class="dot"></span>本周热度榜</h3>
+          <ul class="hot-list">
+            <li><span class="hot-rank top1">01</span><span class="hot-name">灰猎犬号：深海追击</span><span class="hot-score">4.6</span></li>
+            <li><span class="hot-rank top2">02</span><span class="hot-name">暗夜行者 第二季</span><span class="hot-score">4.4</span></li>
+            <li><span class="hot-rank top3">03</span><span class="hot-name">伦敦黑帮 第四季</span><span class="hot-score">4.5</span></li>
+            <li><span class="hot-rank">04</span><span class="hot-name">格陵兰2：迁徙</span><span class="hot-score">4.1</span></li>
+            <li><span class="hot-rank">05</span><span class="hot-name">锈湖（动画电影）</span><span class="hot-score">4.2</span></li>
+            <li><span class="hot-rank">06</span><span class="hot-name">铁幕之下</span><span class="hot-score">4.7</span></li>
+            <li><span class="hot-rank">07</span><span class="hot-name">潮汐帝国</span><span class="hot-score">3.9</span></li>
+            <li><span class="hot-rank">08</span><span class="hot-name">二战全彩实录 太平洋篇</span><span class="hot-score">4.5</span></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3><span class="dot"></span>快速入口</h3>
+          <div class="quick-links">
+            <a href="#updates">今日更新清单</a>
+            <a href="#faq">新片常见问题</a>
+            <a href="#guide">选片指南</a>
+            <a href="#contribute">投稿通道</a>
+            <a href="#timeline">播出时间线</a>
+          </div>
+        </div>
+        <div class="sidebar-card">
+          <h3><span class="dot"></span>更新节奏</h3>
+          <ul class="hot-list" style="font-size:12.5px;">
+            <li><span class="hot-name">战争史诗 / 纪录片</span><span class="hot-score">一次性放出</span></li>
+            <li><span class="hot-name">韩剧 / 英剧</span><span class="hot-score">每周2—3集</span></li>
+            <li><span class="hot-name">动画长片</span><span class="hot-score">周末上线</span></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<!-- 页尾 -->
+<footer class="footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">
+        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="44" height="44" rx="10" fill="#2c5282"/>
+          <path d="M16 14 L16 34 L32 24 Z" fill="#fc8181"/>
+        </svg>
+        <span>eeuss影院骑兵区高清播放</span>
+      </div>
+      <p class="footer-desc">
+        覆盖2026年10月至11月新上线的战争、悬疑、奇幻、纪录片等高清内容，条目类型含长片、周更剧集、动画电影与口述史纪录片。每周三、周日更新片单与解析，历史条目保留完整时间线和档案编号。
+      </p>
+    </div>
+    <div>
+      <h4>内容频道</h4>
+      <ul>
+        <li><a href="#featured">战争史诗片单</a></li>
+        <li><a href="#featured">悬疑犯罪剧集</a></li>
+        <li><a href="#featured">历史纪录片</a></li>
+        <li><a href="#featured">动画长片</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>参与</h4>
+      <ul>
+        <li><a href="#contribute">长评投稿</a></li>
+        <li><a href="#comments">用户评论</a></li>
+        <li><a href="#timeline">播出时间线</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>关于</h4>
+      <ul>
+        <li><a href="#overview">内容概览</a></li>
+        <li><a href="#guide">选片指南</a></li>
+        <li><a href="#news">制作动态</a></li>
+        <li><a href="#related">相关方向</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>页面内容为示例条目，片名、评分、评论均为演示用途，不构成观看建议。</span>
+      <span>最后更新：2026-11-08 · 对应更新条目《暗夜行者》S2E8 与《灰猎犬号》花絮</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="返回顶部">↑</button>
+
+<script>
+(function() {
+  // 返回顶部
+  var backTop = document.getElementById('backTop');
+  var scrollTimer;
+  window.addEventListener('scroll', function() {
+    if (scrollTimer) return;
+    scrollTimer = setTimeout(function() {
+      scrollTimer = null;
+      if (window.scrollY > window.innerHeight) {
+        backTop.classList.add('show');
+      } else {
+        backTop.classList.remove('show');
+      }
+    }, 100);
+  });
+  backTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // 本地搜索筛选
+  var searchInput = document.getElementById('searchInput');
+  var searchBtn = document.getElementById('searchBtn');
+  var cards = document.querySelectorAll('#featured .content-card');
+  var noResult = document.getElementById('searchNoResult');
+
+  function doSearch() {
+    var q = searchInput.value.trim().toLowerCase();
+    var found = 0;
+    cards.forEach(function(card) {
+      var text = card.textContent.toLowerCase();
+      if (!q || text.indexOf(q) !== -1) {
+        card.style.display = '';
+        found++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    if (found === 0 && q !== '') {
+      noResult.classList.add('show');
+    } else {
+      noResult.classList.remove('show');
+    }
+  }
+
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      doSearch();
+    }
+  });
+  searchInput.addEventListener('input', function() {
+    if (searchInput.value.trim() === '') {
+      cards.forEach(function(c) { c.style.display = ''; });
+      noResult.classList.remove('show');
+    }
+  });
+
+  // 侧栏频道高亮
+  var channelLinks = document.querySelectorAll('.channel-list a');
+  var sections = [];
+  channelLinks.forEach(function(link) {
+    var id = link.getAttribute('href').replace('#', '');
+    var sec = document.getElementById(id);
+    if (sec) sections.push({ id: id, el: sec, link: link });
+  });
+
+  if (sections.length) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          channelLinks.forEach(function(l) { l.classList.remove('active'); });
+          var match = sections.find(function(s) { return s.el === entry.target; });
+          if (match) match.link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-120px 0px -60% 0px', threshold: 0 });
+
+    sections.forEach(function(s) { observer.observe(s.el); });
+  }
+
+  // 分类按钮筛选（简化：点击分类滚动到精选并临时筛选相关标签）
+  document.querySelectorAll('.category-item[data-filter]').forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      var filter = this.getAttribute('data-filter');
+      var filterMap = {
+        war: ['战争', '二战', '海战'],
+        crime: ['悬疑', '犯罪', '卧底'],
+        fantasy: ['奇幻', '冒险', '游戏改编'],
+        scifi: ['科幻', '灾难', '气候'],
+        doc: ['纪录片', '历史', '口述史'],
+        british: ['英剧', '黑帮', '长镜头'],
+        korean: ['韩剧', '悬疑', '反转'],
+        animation: ['动画', '游戏改编', '手绘']
+      };
+      var keywords = filterMap[filter] || [];
+      cards.forEach(function(card) {
+        var text = card.textContent;
+        var match = keywords.some(function(k) { return text.indexOf(k) !== -1; });
+        card.style.display = match ? '' : 'none';
+      });
+      noResult.classList.remove('show');
+      document.getElementById('featured').scrollIntoView({ behavior: 'smooth' });
+      // 5秒后恢复全部显示
+      setTimeout(function() {
+        cards.forEach(function(c) { c.style.display = ''; });
+      }, 8000);
+    });
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "eeuss影院骑兵区高清播放",
+  "description": "聚合战争史诗、悬疑犯罪、奇幻冒险、科幻灾难类高清影视内容，提供片单、更新动态、深度解析和用户评论。",
+  "url": "https://example.com/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "《灰猎犬号：深海追击》和2020年那部有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2020年那部改编自C.S. Forester的小说《The Good Shepherd》，片长91分钟，主角由汤姆·汉克斯饰演。2026年这部是同一小说IP的重新授权改编，片长118分钟，导演换成了拍过《冰海陷落》的团队，舰桥内景按真实弗莱彻级驱逐舰图纸搭建，军事术语密度更高。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《暗夜行者》第二季一共多少集，什么时候完结？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "第二季共12集，2026年10月16日首播，每周四、周日各更新一集。截至11月8日已更新至第8集，剩余4集将在11月12日、15日、19日、22日放出。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《锈湖》动画电影没玩过游戏能看懂吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "能跟住主线，但细节会漏。电影前30分钟用旁白交代了“记忆湖水”的基本规则。玩过原作的观众能认出湖边木屋、红色雾气、猫头鹰面具这些符号对应的游戏关卡，没玩过的观众需要把注意力放在主角每次循环的选择变化上。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《伦敦黑帮》第四季第3集的长镜头是真的没有剪辑吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是单镜头拍摄，但用了隐藏剪辑点。拍摄花絮显示，剧组在仓库货架后面设置了两处遮挡，利用镜头穿过货架的瞬间做帧匹配。实际拍摄时排练了17遍，第12遍通过。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《铁幕之下》的档案素材来源可靠吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "每集片尾标注了引用档案的馆藏编号和获取时间。第1集使用的是波兰国家记忆研究院2024年公开的监听记录，编号IPN BU 1573/42；第2集柏林地下通道的影像来自德国联邦档案馆，编号BArch B 285/17；第3集匈牙利事件的无线电监听记录由美国国家档案馆2025年解密。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《格陵兰2：迁徙》和第一部的剧情连接紧吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "剧情发生在第一部陨石事件十年后，主角一家已经迁到北极圈内的临时定居点。第一部的核心事件在第二部里只作为背景提到，主要冲突是定居点资源耗尽后的向南迁徙。没看过第一部也能看懂，但有两处人物关系需要前作知识。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+          </html>
