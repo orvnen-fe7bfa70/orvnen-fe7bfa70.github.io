@@ -1,0 +1,1510 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>麻豆天美九幺蜜桃 - 热播作品与分类聚合</title>
+<meta name="description" content="麻豆天美九幺蜜桃内容聚合页，汇总热播作品条目、分类索引、榜单与用户评论，按日期更新，适合想快速了解近期热门作品与分类导航的观众浏览。">
+<meta name="keywords" content="麻豆天美九幺蜜桃">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%238f2d45'/%3E%3Ccircle cx='35' cy='42' r='15' fill='%23f7d9a8'/%3E%3Ccircle cx='68' cy='42' r='15' fill='%23f7d9a8'/%3E%3Cpath d='M30 70 Q50 88 70 70' stroke='%23f7d9a8' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --brand:#8f2d45;
+  --brand-light:#b94a63;
+  --brand-dark:#631a2d;
+  --accent:#d9a441;
+  --bg:#faf7f2;
+  --panel:#ffffff;
+  --panel-alt:#f5eee6;
+  --text:#251e1c;
+  --text-2:#5c514c;
+  --text-3:#8e817b;
+  --line:#e6ddd4;
+  --radius-card:14px;
+  --radius-tag:20px;
+  --radius-btn:8px;
+  --shadow:0 1px 3px rgba(38,23,18,.06),0 4px 14px rgba(38,23,18,.04);
+  --shadow-hover:0 4px 10px rgba(38,23,18,.1),0 10px 28px rgba(38,23,18,.07);
+  --font:system-ui,-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --sticky-h:96px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--sticky-h)}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.75;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+ul,ol{list-style:none}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--brand-light);outline-offset:2px}
+
+/* ---------- 吸顶公告条 ---------- */
+.notice-bar{
+  background:linear-gradient(90deg,var(--brand-dark),var(--brand));
+  color:#fff;font-size:13px;padding:7px 16px;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  position:sticky;top:0;z-index:60;
+}
+.notice-bar .nb-brand{font-weight:700;letter-spacing:.5px;color:#ffe9c9;white-space:nowrap}
+.notice-bar ul{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.notice-bar li{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.notice-bar .dot{width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.notice-bar .nb-date{color:#ffd9a8;font-variant-numeric:tabular-nums}
+
+/* ---------- 页头 ---------- */
+.header{
+  position:sticky;top:32px;z-index:55;
+  background:rgba(250,247,242,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  max-width:1360px;margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;gap:22px;
+}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo svg{width:38px;height:38px;border-radius:10px;flex-shrink:0}
+.logo-text{font-size:19px;font-weight:800;letter-spacing:.5px;color:var(--brand-dark);line-height:1.2;white-space:nowrap}
+.main-nav{display:flex;gap:4px;flex-wrap:wrap;flex:1}
+.main-nav a{
+  font-size:13.5px;color:var(--text-2);padding:6px 11px;border-radius:var(--radius-btn);
+  transition:background .18s,color .18s;white-space:nowrap;
+}
+.main-nav a:hover,.main-nav a:focus-visible{background:var(--panel-alt);color:var(--brand)}
+.main-nav a.active{background:var(--brand);color:#fff}
+.header-tools{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.search-box{
+  display:flex;align-items:center;border:1px solid var(--line);border-radius:var(--radius-btn);
+  background:var(--panel);overflow:hidden;width:190px;
+}
+.search-box input{
+  border:0;outline:0;padding:7px 10px;font-size:13px;width:100%;background:transparent;color:var(--text);
+}
+.search-box button{
+  border:0;background:var(--brand);color:#fff;padding:7px 11px;font-size:13px;flex-shrink:0;
+  transition:background .18s;
+}
+.search-box button:hover{background:var(--brand-light)}
+.hamburger{
+  display:none;border:1px solid var(--line);background:var(--panel);border-radius:8px;
+  padding:7px 10px;font-size:18px;line-height:1;color:var(--text-2);
+}
+
+/* ---------- 主容器 ---------- */
+.container{max-width:1360px;margin:0 auto;padding:0 20px}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;border-radius:18px;margin:24px 0 8px;
+  background:linear-gradient(135deg,#3d1220 0%,#7d2439 46%,#b94a63 100%);
+  color:#fff;
+}
+.hero-bg{position:absolute;inset:0;pointer-events:none;opacity:.55}
+.hero-inner{
+  position:relative;z-index:2;display:grid;grid-template-columns:1.35fr .9fr;gap:30px;
+  padding:44px 42px 40px;align-items:center;
+}
+.hero h1{
+  font-size:clamp(30px,4vw,46px);line-height:1.18;letter-spacing:1px;font-weight:900;
+  color:#fff;margin-bottom:14px;
+}
+.hero h1 .hl{color:#ffd9a8}
+.hero-desc{font-size:15px;color:#f3ddd9;max-width:540px;line-height:1.85;margin-bottom:22px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:6px;padding:9px 20px;border-radius:var(--radius-btn);
+  font-size:14px;font-weight:600;border:1px solid transparent;transition:background .18s,transform .18s,border-color .18s;
+}
+.btn-primary{background:var(--accent);color:#3a2109}
+.btn-primary:hover{background:#e8b85a;transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.4)}
+.btn-ghost:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap}
+.hero-stats .hs{display:flex;flex-direction:column}
+.hs b{font-size:22px;color:#ffd9a8;line-height:1.2;font-variant-numeric:tabular-nums}
+.hs span{font-size:12px;color:#e3c6c1}
+.hero-visual{position:relative;display:flex;justify-content:center}
+.hero-card{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);
+  border-radius:16px;padding:16px;backdrop-filter:blur(4px);width:100%;max-width:290px;
+}
+.hero-card .hc-tag{font-size:11px;letter-spacing:1px;color:#ffd9a8;text-transform:uppercase;margin-bottom:10px}
+.hero-card ul li{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:7px 0;border-bottom:1px dashed rgba(255,255,255,.2);color:#fbeae6}
+.hero-card ul li:last-child{border-bottom:0}
+.hero-card ul li span:last-child{color:#ffd9a8;font-variant-numeric:tabular-nums;flex-shrink:0}
+
+/* ---------- 三栏布局 ---------- */
+.layout{
+  display:grid;grid-template-columns:178px minmax(0,1fr) 254px;gap:26px;
+  align-items:start;padding-bottom:60px;
+}
+.channel-col{
+  position:sticky;top:calc(var(--sticky-h) + 14px);
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:14px 10px;box-shadow:var(--shadow);
+}
+.channel-col h2{
+  font-size:12px;letter-spacing:2px;color:var(--text-3);font-weight:700;
+  padding:0 8px 8px;border-bottom:1px solid var(--line);margin-bottom:6px;
+}
+.channel-col ul li a{
+  display:flex;align-items:center;justify-content:space-between;gap:6px;
+  font-size:13.5px;color:var(--text-2);padding:7px 8px;border-radius:7px;transition:background .16s,color .16s;
+}
+.channel-col ul li a:hover,.channel-col ul li a.active{background:var(--panel-alt);color:var(--brand);font-weight:600}
+.channel-col ul li a .cnt{font-size:11px;color:var(--text-3);font-variant-numeric:tabular-nums}
+.channel-col ul li a.active .cnt{color:var(--brand-light)}
+
+.main-col{min-width:0;display:flex;flex-direction:column;gap:34px}
+.side-col{display:flex;flex-direction:column;gap:22px;position:sticky;top:calc(var(--sticky-h) + 14px)}
+
+/* ---------- 板块通用 ---------- */
+.section{scroll-margin-top:var(--sticky-h)}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:16px;flex-wrap:wrap}
+.section-head h2{font-size:21px;font-weight:800;letter-spacing:.4px;color:var(--text);position:relative;padding-left:13px}
+.section-head h2::before{
+  content:"";position:absolute;left:0;top:6px;bottom:6px;width:4px;border-radius:3px;
+  background:linear-gradient(180deg,var(--brand),var(--accent));
+}
+.section-head .sub{font-size:12.5px;color:var(--text-3)}
+.section-head .more{font-size:13px;color:var(--brand);font-weight:600;white-space:nowrap}
+.section-head .more:hover{text-decoration:underline}
+
+/* ---------- 概览 ---------- */
+.overview{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:22px 24px;box-shadow:var(--shadow);font-size:14.5px;color:var(--text-2);line-height:1.9;
+}
+.overview p+p{margin-top:12px}
+.overview strong{color:var(--text);font-weight:700}
+
+/* ---------- 精选卡片 ---------- */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:16px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;
+  transition:transform .2s,box-shadow .2s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.card-thumb{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--panel-alt)}
+.card-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.card:hover .card-thumb img{transform:scale(1.04)}
+.card-badge{
+  position:absolute;top:9px;left:9px;background:rgba(61,18,32,.82);color:#ffd9a8;
+  font-size:11px;padding:2px 9px;border-radius:var(--radius-tag);backdrop-filter:blur(3px);
+}
+.card-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:7px;flex:1}
+.card-title{font-size:14.5px;font-weight:700;line-height:1.45;color:var(--text)}
+.card-title:hover{color:var(--brand)}
+.card-desc{font-size:12.5px;color:var(--text-2);line-height:1.65;flex:1}
+.card-tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{
+  font-size:11px;color:var(--brand);background:#f7e8ea;border-radius:var(--radius-tag);
+  padding:1px 8px;white-space:nowrap;
+}
+.tag.gray{color:var(--text-3);background:var(--panel-alt)}
+.card-meta{display:flex;justify-content:space-between;font-size:11.5px;color:var(--text-3);border-top:1px dashed var(--line);padding-top:8px;font-variant-numeric:tabular-nums}
+.card-meta .hot{color:var(--brand);font-weight:700}
+
+/* ---------- 更新列表 ---------- */
+.update-list{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);box-shadow:var(--shadow);overflow:hidden}
+.update-list li{display:flex;gap:14px;padding:12px 16px;border-bottom:1px solid var(--line);align-items:flex-start;transition:background .16s}
+.update-list li:last-child{border-bottom:0}
+.update-list li:hover{background:#fdfaf6}
+.update-list .u-date{
+  font-size:12px;color:var(--text-3);font-variant-numeric:tabular-nums;flex-shrink:0;
+  width:74px;padding-top:2px;
+}
+.update-list .u-main{flex:1;min-width:0}
+.update-list .u-title{font-size:14px;font-weight:650;color:var(--text);line-height:1.5}
+.update-list .u-title:hover{color:var(--brand)}
+.update-list .u-sum{font-size:12.5px;color:var(--text-2);line-height:1.6;margin-top:2px}
+.update-list .u-tag{font-size:11px;color:var(--text-3);background:var(--panel-alt);border-radius:var(--radius-tag);padding:1px 8px;flex-shrink:0;align-self:center}
+
+/* ---------- 分类入口 ---------- */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.cat-item{
+  display:flex;flex-direction:column;gap:4px;background:var(--panel);border:1px solid var(--line);
+  border-radius:12px;padding:13px 15px;box-shadow:var(--shadow);transition:border-color .18s,transform .18s,box-shadow .18s;
+}
+.cat-item:hover{border-color:var(--brand-light);transform:translateY(-2px);box-shadow:var(--shadow-hover)}
+.cat-item .c-name{font-size:14.5px;font-weight:700;color:var(--text)}
+.cat-item .c-desc{font-size:12px;color:var(--text-3);line-height:1.55}
+.cat-item .c-cnt{font-size:11.5px;color:var(--brand);font-weight:600;margin-top:2px}
+
+/* ---------- 深度解析 ---------- */
+.deep{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:26px 30px;box-shadow:var(--shadow);
+}
+.deep h3{font-size:17px;font-weight:800;color:var(--brand-dark);margin:24px 0 10px;letter-spacing:.3px}
+.deep h3:first-child{margin-top:0}
+.deep p{font-size:14.5px;color:var(--text-2);line-height:1.95;margin-bottom:10px}
+.deep ul{margin:6px 0 12px 0;display:flex;flex-direction:column;gap:7px}
+.deep ul li{font-size:14px;color:var(--text-2);line-height:1.75;padding-left:18px;position:relative}
+.deep ul li::before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:2px;background:var(--accent)}
+.deep .mini-table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.5px}
+.deep .mini-table th,.deep .mini-table td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+.deep .mini-table th{background:var(--panel-alt);color:var(--text);font-weight:700;white-space:nowrap}
+.deep .mini-table td{color:var(--text-2)}
+.deep blockquote{
+  border-left:3px solid var(--brand-light);background:var(--panel-alt);
+  padding:12px 16px;border-radius:0 10px 10px 0;font-size:13.5px;color:var(--text-2);margin:14px 0;
+}
+.deep strong{color:var(--text);font-weight:700}
+
+/* ---------- 体验指南 ---------- */
+.guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.guide-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);
+  padding:18px 20px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;
+}
+.guide-card .g-num{
+  display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
+  border-radius:8px;background:var(--brand);color:#fff;font-size:13px;font-weight:800;flex-shrink:0;
+}
+.guide-card h3{font-size:15px;font-weight:700;color:var(--text);display:flex;align-items:center;gap:9px}
+.guide-card p{font-size:13px;color:var(--text-2);line-height:1.75}
+
+/* ---------- FAQ ---------- */
+.faq{display:flex;flex-direction:column;gap:10px}
+.faq details{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  box-shadow:var(--shadow);overflow:hidden;
+}
+.faq summary{
+  list-style:none;cursor:pointer;padding:14px 18px;font-size:14.5px;font-weight:650;
+  color:var(--text);display:flex;justify-content:space-between;align-items:center;gap:12px;
+  transition:background .16s;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{background:#fdfaf6}
+.faq summary::after{content:"＋";font-size:16px;color:var(--brand);font-weight:400;flex-shrink:0}
+.faq details[open] summary::after{content:"－"}
+.faq .faq-body{padding:0 18px 16px;font-size:13.5px;color:var(--text-2);line-height:1.85}
+.faq .faq-body p+p{margin-top:8px}
+
+/* ---------- 评论 ---------- */
+.comment-wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.comment{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:12px 15px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:6px;
+}
+.comment .c-head{display:flex;align-items:center;gap:8px}
+.comment .avatar{
+  width:26px;height:26px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;color:#fff;background:var(--brand-light);
+}
+.comment .nick{font-size:12.5px;font-weight:650;color:var(--text)}
+.comment .c-time{font-size:11px;color:var(--text-3);margin-left:auto;font-variant-numeric:tabular-nums}
+.comment .c-text{font-size:13px;color:var(--text-2);line-height:1.7}
+.comment .c-text em{font-style:normal;color:var(--brand);font-weight:600}
+
+/* ---------- 资讯 ---------- */
+.news-list{display:flex;flex-direction:column;gap:12px}
+.news-item{
+  display:flex;gap:16px;background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--radius-card);padding:14px 18px;box-shadow:var(--shadow);
+  transition:transform .18s,box-shadow .18s;align-items:flex-start;
+}
+.news-item:hover{transform:translateY(-2px);box-shadow:var(--shadow-hover)}
+.news-thumb{width:96px;height:72px;border-radius:9px;overflow:hidden;flex-shrink:0;background:var(--panel-alt)}
+.news-thumb img{width:100%;height:100%;object-fit:cover}
+.news-body{flex:1;min-width:0}
+.news-title{font-size:14.5px;font-weight:700;color:var(--text);line-height:1.5}
+.news-title:hover{color:var(--brand)}
+.news-sum{font-size:12.8px;color:var(--text-2);line-height:1.65;margin-top:3px}
+.news-date{font-size:11.5px;color:var(--text-3);margin-top:5px;font-variant-numeric:tabular-nums}
+
+/* ---------- 相关推荐 ---------- */
+.rel-tags{display:flex;flex-wrap:wrap;gap:9px}
+.rel-tags a{
+  font-size:13px;color:var(--text-2);background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--radius-tag);padding:5px 14px;transition:border-color .18s,color .18s,background .18s;
+}
+.rel-tags a:hover{border-color:var(--brand);color:var(--brand);background:#fdf5f4}
+
+/* ---------- 热度榜 ---------- */
+.rank-list{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);box-shadow:var(--shadow);overflow:hidden}
+.rank-list li{display:flex;align-items:center;gap:12px;padding:11px 16px;border-bottom:1px solid var(--line)}
+.rank-list li:last-child{border-bottom:0}
+.rank-list .rk{
+  width:22px;height:22px;border-radius:6px;background:var(--panel-alt);color:var(--text-3);
+  font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  font-variant-numeric:tabular-nums;
+}
+.rank-list li:nth-child(1) .rk{background:var(--brand);color:#fff}
+.rank-list li:nth-child(2) .rk{background:var(--brand-light);color:#fff}
+.rank-list li:nth-child(3) .rk{background:var(--accent);color:#3a2109}
+.rank-list .rk-name{font-size:13.5px;font-weight:650;color:var(--text);flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-list .rk-score{font-size:12px;color:var(--brand);font-weight:700;font-variant-numeric:tabular-nums}
+
+/* ---------- 侧栏通用面板 ---------- */
+.side-panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:16px 16px 14px;box-shadow:var(--shadow)}
+.side-panel h3{font-size:14px;font-weight:800;color:var(--text);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px}
+.side-panel h3::before{content:"";width:3px;height:14px;border-radius:2px;background:var(--brand);flex-shrink:0}
+.side-panel ul{display:flex;flex-direction:column;gap:9px}
+.side-panel li{font-size:12.8px;color:var(--text-2);line-height:1.55}
+.side-panel li a:hover{color:var(--brand)}
+.side-panel .sp-meta{font-size:11px;color:var(--text-3);margin-top:1px;font-variant-numeric:tabular-nums}
+.side-panel .hot-num{color:var(--brand);font-weight:700;margin-right:4px}
+
+/* ---------- 补充板块：时间线/可信度 ---------- */
+.timeline{display:flex;flex-direction:column;gap:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:18px 22px;box-shadow:var(--shadow)}
+.tl-item{display:flex;gap:16px;position:relative;padding-bottom:18px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:"";position:absolute;left:5px;top:16px;bottom:0;width:1px;background:var(--line)}
+.tl-item:last-child::before{display:none}
+.tl-dot{width:11px;height:11px;border-radius:50%;background:var(--brand);flex-shrink:0;margin-top:5px;border:2px solid #fff;box-shadow:0 0 0 1px var(--brand)}
+.tl-date{font-size:12px;color:var(--text-3);font-variant-numeric:tabular-nums;flex-shrink:0;width:72px;padding-top:2px}
+.tl-body{flex:1}
+.tl-title{font-size:13.5px;font-weight:650;color:var(--text)}
+.tl-desc{font-size:12.5px;color:var(--text-2);line-height:1.6;margin-top:2px}
+
+/* ---------- 投稿/互动栏 ---------- */
+.interact-bar{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px;
+}
+.interact-card{
+  background:linear-gradient(135deg,#fff 0%,#fdf3ee 100%);
+  border:1px solid var(--line);border-radius:var(--radius-card);padding:18px 20px;
+  box-shadow:var(--shadow);display:flex;flex-direction:column;gap:6px;
+}
+.interact-card h3{font-size:15px;font-weight:800;color:var(--brand-dark)}
+.interact-card p{font-size:12.8px;color:var(--text-2);line-height:1.65}
+.interact-card .btn{margin-top:6px;align-self:flex-start;padding:6px 16px;font-size:13px}
+
+/* ---------- 页尾 ---------- */
+.footer{background:#2a1a1d;color:#cdbfb9;margin-top:20px;padding:40px 0 0;font-size:13px}
+.footer-inner{max-width:1360px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+.footer h4{color:#f3e7e2;font-size:14px;font-weight:700;margin-bottom:12px}
+.footer-brand .fb-logo{display:flex;align-items:center;gap:9px;margin-bottom:12px}
+.footer-brand .fb-logo svg{width:32px;height:32px;border-radius:8px}
+.footer-brand .fb-logo span{font-size:17px;font-weight:800;color:#ffd9a8;letter-spacing:.5px}
+.footer-brand p{line-height:1.85;color:#b3a29c}
+.footer ul{display:flex;flex-direction:column;gap:8px}
+.footer ul a:hover{color:#ffd9a8}
+.footer-bottom{
+  max-width:1360px;margin:28px auto 0;padding:16px 20px;border-top:1px solid rgba(255,255,255,.1);
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;color:#8e7f79;
+}
+
+/* ---------- 筛选无结果 ---------- */
+.no-result{
+  display:none;padding:22px;text-align:center;font-size:13.5px;color:var(--text-3);
+  background:var(--panel);border:1px dashed var(--line);border-radius:var(--radius-card);
+}
+.no-result.show{display:block}
+
+/* ---------- 回到顶部 ---------- */
+.to-top{
+  position:fixed;right:22px;bottom:26px;width:42px;height:42px;border-radius:50%;
+  background:var(--brand);color:#fff;border:0;font-size:18px;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 18px rgba(99,26,45,.35);opacity:0;visibility:hidden;transform:translateY(10px);
+  transition:opacity .25s,visibility .25s,transform .25s,background .2s;z-index:70;
+}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.to-top:hover{background:var(--brand-light)}
+
+/* ---------- 遮罩 ---------- */
+.mask{
+  display:none;position:fixed;inset:0;background:rgba(30,18,16,.45);z-index:58;
+  backdrop-filter:blur(2px);
+}
+.mask.show{display:block}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1100px){
+  .layout{grid-template-columns:160px minmax(0,1fr);}
+  .side-col{grid-column:1 / -1;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;position:static}
+  .hero-inner{grid-template-columns:1fr;padding:34px 28px}
+  .hero-visual{display:none}
+}
+@media (max-width:860px){
+  .layout{grid-template-columns:1fr;}
+  .channel-col{
+    position:static;display:block;padding:10px 12px;
+  }
+  .channel-col h2{display:none}
+  .channel-col ul{display:flex;flex-wrap:wrap;gap:4px}
+  .channel-col ul li a{padding:5px 10px;font-size:13px}
+  .channel-col ul li a .cnt{display:none}
+  .main-nav{display:none}
+  .hamburger{display:inline-flex;align-items:center;justify-content:center}
+  .search-box{width:150px}
+  .header-inner{gap:12px;padding:10px 14px}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:24px}
+  .interact-bar{grid-template-columns:1fr}
+  .news-item{flex-direction:column;gap:10px}
+  .news-thumb{width:100%;height:auto;aspect-ratio:16/9}
+}
+@media (max-width:740px){
+  body{font-size:14px}
+  .container{padding:0 14px}
+  .hero-inner{padding:26px 18px}
+  .hero h1{font-size:27px}
+  .card-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .card-body{padding:10px 11px 12px}
+  .card-title{font-size:13px}
+  .card-desc{font-size:12px}
+  .comment-wall{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .guide-grid{grid-template-columns:1fr}
+  .deep{padding:20px 18px}
+  .footer-inner{grid-template-columns:1fr;gap:22px}
+  .update-list .u-date{width:60px;font-size:11px}
+  .footer-bottom{flex-direction:column;gap:6px}
+  .search-box{width:110px}
+  .logo-text{font-size:16px}
+  .hero-stats{gap:18px}
+  .hero-stats .hs b{font-size:18px}
+  .to-top{right:14px;bottom:18px;width:38px;height:38px}
+}
+@media (max-width:420px){
+  .card-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:1fr}
+  .search-box{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ============ 吸顶公告条 ============ -->
+<div class="notice-bar" role="region" aria-label="更新公告">
+  <span class="nb-brand">麻豆天美九幺蜜桃</span>
+  <ul>
+    <li><span class="dot"></span><span class="nb-date">2026-11-08</span><span>「深夜便利店」第3集上线</span></li>
+    <li><span class="dot"></span><span class="nb-date">11-07</span><span>「天台回响」4K修复版重发</span></li>
+    <li><span class="dot"></span><span class="nb-date">11-06</span><span>本周热度榜新增12部条目</span></li>
+  </ul>
+</div>
+
+<!-- ============ 页头 ============ -->
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="/#top" aria-label="麻豆天美九幺蜜桃首页">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <rect width="100" height="100" rx="22" fill="#8f2d45"/>
+        <circle cx="35" cy="42" r="15" fill="#f7d9a8"/>
+        <circle cx="68" cy="42" r="15" fill="#f7d9a8"/>
+        <path d="M30 70 Q50 88 70 70" stroke="#f7d9a8" stroke-width="7" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-text">麻豆天美九幺蜜桃</span>
+    </a>
+    <nav class="main-nav" aria-label="主题导航">
+      <a href="/#overview" class="active">领域概览</a>
+      <a href="/#featured">精选推荐</a>
+      <a href="/#updates">最新更新</a>
+      <a href="/#categories">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">用户评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#rank">热度榜</a>
+    </nav>
+    <div class="header-tools">
+      <div class="search-box" role="search">
+        <input type="search" id="searchInput" placeholder="搜索条目/标签" aria-label="搜索条目或标签">
+        <button type="button" id="searchBtn" aria-label="执行搜索">搜</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="打开导航菜单" aria-expanded="false" aria-controls="mobileNav">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="mask" id="mask" aria-hidden="true"></div>
+
+<!-- 移动端导航（由汉堡按钮控制，复用 main-nav 内容） -->
+<nav id="mobileNav" class="mobile-nav" hidden aria-label="移动端导航">
+  <div style="display:flex;flex-direction:column;gap:2px;padding:10px 14px;">
+    <a href="/#overview">领域概览</a>
+    <a href="/#featured">精选推荐</a>
+    <a href="/#updates">最新更新</a>
+    <a href="/#categories">分类入口</a>
+    <a href="/#deep">深度解析</a>
+    <a href="/#guide">体验指南</a>
+    <a href="/#faq">常见问答</a>
+    <a href="/#comments">用户评论</a>
+    <a href="/#news">相关资讯</a>
+    <a href="/#rank">热度榜</a>
+  </div>
+</nav>
+
+<main id="top">
+  <div class="container">
+
+    <!-- ============ 首屏 ============ -->
+    <section class="hero" aria-label="主题首屏">
+      <svg class="hero-bg" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <radialGradient id="g1" cx="80%" cy="20%" r="60%">
+            <stop offset="0%" stop-color="#ffd9a8" stop-opacity=".35"/>
+            <stop offset="100%" stop-color="#ffd9a8" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="g2" cx="15%" cy="85%" r="55%">
+            <stop offset="0%" stop-color="#d9a441" stop-opacity=".28"/>
+            <stop offset="100%" stop-color="#d9a441" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="1200" height="400" fill="url(#g1)"/>
+        <rect width="1200" height="400" fill="url(#g2)"/>
+        <circle cx="980" cy="120" r="160" fill="none" stroke="#ffd9a8" stroke-opacity=".18" stroke-width="1.5"/>
+        <circle cx="980" cy="120" r="230" fill="none" stroke="#ffd9a8" stroke-opacity=".1" stroke-width="1.5"/>
+        <circle cx="200" cy="330" r="120" fill="none" stroke="#d9a441" stroke-opacity=".16" stroke-width="1.5"/>
+      </svg>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1>麻豆天美九幺蜜桃</h1>
+          <p class="hero-desc">聚合近期热播的传媒作品条目，按剧情短片、系列剧集、幕后花絮、演员访谈分类索引。每条附类型标签与看点摘要，适合想按题材和口碑筛选观看顺序的观众。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/#featured">看精选条目</a>
+            <a class="btn btn-ghost" href="/#rank">浏览热度榜</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hs"><b>86</b><span>收录条目</span></div>
+            <div class="hs"><b>12</b><span>本周新增</span></div>
+            <div class="hs"><b>9</b><span>内容分类</span></div>
+            <div class="hs"><b>2026-11-08</b><span>最后更新</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-card">
+            <div class="hc-tag">今日更新速览</div>
+            <ul>
+              <li><span>深夜便利店 第3集</span><span>11-08</span></li>
+              <li><span>天台回响 4K修复</span><span>11-07</span></li>
+              <li><span>巷口灯光 花絮</span><span>11-06</span></li>
+              <li><span>演员访谈·林晚</span><span>11-05</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 三栏主体 ============ -->
+    <div class="layout">
+
+      <!-- 左频道索引 -->
+      <aside class="channel-col" aria-label="频道索引">
+        <h2>频道索引</h2>
+        <ul>
+          <li><a href="/#categories" class="active">剧情短片 <span class="cnt">24</span></a></li>
+          <li><a href="/#categories">系列剧集 <span class="cnt">18</span></a></li>
+          <li><a href="/#categories">幕后花絮 <span class="cnt">11</span></a></li>
+          <li><a href="/#categories">演员访谈 <span class="cnt">9</span></a></li>
+          <li><a href="/#categories">都市情感 <span class="cnt">15</span></a></li>
+          <li><a href="/#categories">悬疑短剧 <span class="cnt">7</span></a></li>
+          <li><a href="/#categories">古风剧情 <span class="cnt">6</span></a></li>
+          <li><a href="/#categories">4K修复 <span class="cnt">5</span></a></li>
+          <li><a href="/#categories">新人单元 <span class="cnt">8</span></a></li>
+        </ul>
+      </aside>
+
+      <!-- 中主内容 -->
+      <div class="main-col">
+
+        <!-- 1. 领域概览 -->
+        <section class="section" id="overview">
+          <div class="section-head">
+            <h2>领域概览</h2>
+            <span class="sub">传媒作品方向与近期看点</span>
+          </div>
+          <div class="overview">
+            <p><strong>剧情短片与系列剧集</strong>是当前更新最密集的两类内容。短片单集时长多在8到15分钟，以都市情感、悬疑反转为主；系列剧集则按2到6集连载，人物关系铺得更开，适合连续观看。近期值得留意的条目集中在三个方向：一是以<strong>「深夜便利店」「天台回响」</strong>为代表的都市夜景题材，镜头语言偏冷色调；二是<strong>「巷口灯光」「旧信箱」</strong>这类家庭叙事，节奏慢但情绪浓度高；三是古风单元<strong>「折柳记」</strong>，服化道投入明显高于同体量作品。</p>
+            <p>幕后花絮与演员访谈构成另一条观看线。花絮通常随正片同步或延后一两天发布，能补足拍摄现场的调度细节；访谈则更直接，演员会谈到角色理解和拍摄中的即兴调整。对于想判断一部作品是否对胃口的观众，先看30秒预告、再读一条访谈、最后决定是否追正片，是当前比较高效的筛选路径。</p>
+            <p>4K修复版是近两个月新增的条目类型，已覆盖<strong>5部</strong>早期作品，画质提升明显但片长未变。新人单元每周三固定上新，单集时长更短，题材试验性强，口碑分化也更大。</p>
+          </div>
+        </section>
+
+        <!-- 2. 精选推荐 -->
+        <section class="section" id="featured">
+          <div class="section-head">
+            <h2>精选内容推荐</h2>
+            <a class="more" href="/#rank">查看热度榜 →</a>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/mdtt091_bianli/400/300" width="400" height="300" loading="lazy" alt="深夜便利店剧照：夜间便利店内景">
+                <span class="card-badge">剧情短片</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title"><a href="/#featured">深夜便利店</a></h3>
+                <p class="card-desc">第3集把视角切到夜班店员，凌晨两点的顾客对话撑起整集情绪，结尾留了一个不解释的镜头。</p>
+                <div class="card-tags"><span class="tag">都市</span><span class="tag">单元剧</span><span class="tag gray">11-08更新</span></div>
+                <div class="card-meta"><span>热度 <span class="hot">9.3</span></span><span>评分 8.6</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/mdtt091_tiantai/400/300" width="400" height="300" loading="lazy" alt="天台回响剧照：城市天台黄昏">
+                <span class="card-badge">系列剧集</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title"><a href="/#featured">天台回响</a></h3>
+                <p class="card-desc">4K修复版重新调色，第2集天台对峙的长镜头噪点明显减少，配乐也做了重新混音。</p>
+                <div class="card-tags"><span class="tag">悬疑</span><span class="tag">修复版</span><span class="tag gray">11-07重发</span></div>
+                <div class="card-meta"><span>热度 <span class="hot">8.9</span></span><span>评分 8.4</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/mdtt091_xiangkou/400/300" width="400" height="300" loading="lazy" alt="巷口灯光剧照：夜晚巷口灯光">
+                <span class="card-badge">幕后花絮</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title"><a href="/#featured">巷口灯光·花絮</a></h3>
+                <p class="card-desc">12分钟幕后记录了巷口那场雨戏的布光方案，导演现场改了两处走位，演员淋了四遍。</p>
+                <div class="card-tags"><span class="tag">幕后</span><span class="tag">家庭叙事</span><span class="tag gray">11-06上线</span></div>
+                <div class="card-meta"><span>热度 <span class="hot">7.8</span></span><span>时长 12分钟</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/mdtt091_linwan/400/300" width="400" height="300" loading="lazy" alt="演员访谈现场：林晚接受采访">
+                <span class="card-badge">演员访谈</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title"><a href="/#featured">林晚访谈：角色不是演出来的</a></h3>
+                <p class="card-desc">谈到「旧信箱」里那场哭戏，林晚说先拍了三遍轻的，最后用的是最收着的一条。</p>
+                <div class="card-tags"><span class="tag">访谈</span><span class="tag">表演方法</span><span class="tag gray">11-05上线</span></div>
+                <div class="card-meta"><span>热度 <span class="hot">7.5</span></span><span>时长 18分钟</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/mdtt091_jiuxinxiang/400/300" width="400" height="300" loading="lazy" alt="旧信箱剧照：老式信箱特写">
+                <span class="card-badge">都市情感</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title"><a href="/#featured">旧信箱</a></h3>
+                <p class="card-desc">全片只有两个场景，靠一封信的读信声推进，第6分钟开始近乎独角戏，收尾干脆。</p>
+                <div class="card-tags"><span class="tag">情感</span><span class="tag">独角戏</span><span class="tag gray">11-04上线</span></div>
+                <div class="card-meta"><span>热度 <span class="hot">8.1</span></span><span>评分 8.7</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/mdtt091_zheliu/400/300" width="400" height="300" loading="lazy" alt="折柳记剧照：古风庭院折柳">
+                <span class="card-badge">古风剧情</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title"><a href="/#featured">折柳记</a></h3>
+                <p class="card-desc">服化道在同体量作品里算突出，第二幕的庭院调度用了三组机位，台词偏文但不算难懂。</p>
+                <div class="card-tags"><span class="tag">古风</span><span class="tag">单元剧</span><span class="tag gray">11-02上线</span></div>
+                <div class="card-meta"><span>热度 <span class="hot">7.9</span></span><span>评分 8.3</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/mdtt091_xinren/400/300" width="400" height="300" loading="lazy" alt="新人单元剧照：年轻演员对手戏">
+                <span class="card-badge">新人单元</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title"><a href="/#featured">新人单元·周三场</a></h3>
+                <p class="card-desc">本周三条短片题材分别是合租、考研和夜班出租车，第二条完成度最高，第一条剪辑偏碎。</p>
+                <div class="card-tags"><span class="tag">新人</span><span class="tag">短片集</span><span class="tag gray">11-05更新</span></div>
+                <div class="card-meta"><span>热度 <span class="hot">7.2</span></span><span>条目 3部</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-thumb">
+                <img src="https://picsum.photos/seed/mdtt091_yeban/400/300" width="400" height="300" loading="lazy" alt="夜班出租车剧照：出租车夜间行驶">
+                <span class="card-badge">悬疑短剧</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title"><a href="/#featured">夜班出租车</a></h3>
+                <p class="card-desc">单集结构，前半段靠车载电台铺信息，反转点在第9分钟，二刷能看出司机台词里的伏笔。</p>
+                <div class="card-tags"><span class="tag">悬疑</span><span class="tag">单集</span><span class="tag gray">11-03上线</span></div>
+                <div class="card-meta"><span>热度 <span class="hot">8.4</span></span><span>评分 8.5</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 3. 最新更新 -->
+        <section class="section" id="updates">
+          <div class="section-head">
+            <h2>最新更新动态</h2>
+            <span class="sub">2026-10-10 至 2026-11-08</span>
+          </div>
+          <ul class="update-list">
+            <li>
+              <span class="u-date">2026-11-08</span>
+              <div class="u-main">
+                <a class="u-title" href="/#featured">深夜便利店 第3集上线</a>
+                <p class="u-sum">单集时长14分钟，新增夜班店员视角，片尾加了30秒下集预告。</p>
+              </div>
+              <span class="u-tag">剧情短片</span>
+            </li>
+            <li>
+              <span class="u-date">2026-11-07</span>
+              <div class="u-main">
+                <a class="u-title" href="/#featured">天台回响 4K修复版重发</a>
+                <p class="u-sum">重新调色并混音，片头加了两秒修复说明卡，正片内容未删改。</p>
+              </div>
+              <span class="u-tag">修复版</span>
+            </li>
+            <li>
+              <span class="u-date">2026-11-06</span>
+              <div class="u-main">
+                <a class="u-title" href="/#featured">巷口灯光·花絮上线</a>
+                <p class="u-sum">12分钟幕后，记录雨戏布光和两次走位调整，含一段导演现场收音。</p>
+              </div>
+              <span class="u-tag">幕后花絮</span>
+            </li>
+            <li>
+              <span class="u-date">2026-11-05</span>
+              <div class="u-main">
+                <a class="u-title" href="/#featured">林晚访谈发布</a>
+                <p class="u-sum">18分钟对谈，围绕「旧信箱」哭戏的拍摄顺序和情绪控制展开。</p>
+              </div>
+              <span class="u-tag">演员访谈</span>
+            </li>
+            <li>
+              <span class="u-date">2026-11-04</span>
+              <div class="u-main">
+                <a class="u-title" href="/#featured">旧信箱 全片上线</a>
+                <p class="u-sum">单集22分钟，两个场景完成叙事，字幕版与配音版同时放出。</p>
+              </div>
+              <span class="u-tag">都市情感</span>
+            </li>
+            <li>
+              <span class="u-date">2026-11-03</span>
+              <div class="u-main">
+                <a class="u-title" href="/#featured">夜班出租车 上线</a>
+                <p class="u-sum">悬疑单集，第9分钟反转，评论区已出现二刷伏笔整理。</p>
+              </div>
+              <span class="u-tag">悬疑短剧</span>
+            </li>
+            <li>
+              <span class="u-date">2026-11-02</span>
+              <div class="u-main">
+                <a class="u-title" href="/#featured">折柳记 第二幕更新</a>
+                <p class="u-sum">庭院调度场景补拍，第2幕重剪后时长多出48秒。</p>
+              </div>
+              <span class="u-tag">古风剧情</span>
+            </li>
+            <li>
+              <span class="u-date">2026-10-30</span>
+              <div class="u-main">
+                <a class="u-title" href="/#featured">新人单元·周三场 三条短片</a>
+                <p class="u-sum">合租、考研、夜班出租车三个题材，完成度有高有低。</p>
+              </div>
+              <span class="u-tag">新人单元</span>
+            </li>
+            <li>
+              <span class="u-date">2026-10-26</span>
+              <div class="u-main">
+                <a class="u-title" href="/#rank">热度榜算法调整说明</a>
+                <p class="u-sum">播放完成度权重上调，收藏与追更的计入周期从7天改为10天。</p>
+              </div>
+              <span class="u-tag">榜单规则</span>
+            </li>
+            <li>
+              <span class="u-date">2026-10-18</span>
+              <div class="u-main">
+                <a class="u-title" href="/#featured">「旧信箱」配音版上线</a>
+                <p class="u-sum">配音版比原声版晚13天，两位配音演员的读信段落处理有差异。</p>
+              </div>
+              <span class="u-tag">都市情感</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 4. 分类入口 -->
+        <section class="section" id="categories">
+          <div class="section-head">
+            <h2>分类入口</h2>
+            <span class="sub">按题材与形态索引</span>
+          </div>
+          <div class="cat-grid">
+            <a class="cat-item" href="/#categories">
+              <span class="c-name">剧情短片</span>
+              <span class="c-desc">单集8—15分钟，都市与悬疑为主</span>
+              <span class="c-cnt">24 部</span>
+            </a>
+            <a class="cat-item" href="/#categories">
+              <span class="c-name">系列剧集</span>
+              <span class="c-desc">2—6集连载，人物线更完整</span>
+              <span class="c-cnt">18 部</span>
+            </a>
+            <a class="cat-item" href="/#categories">
+              <span class="c-name">幕后花絮</span>
+              <span class="c-desc">布光、走位与现场调度记录</span>
+              <span class="c-cnt">11 条</span>
+            </a>
+            <a class="cat-item" href="/#categories">
+              <span class="c-name">演员访谈</span>
+              <span class="c-desc">角色理解与拍摄即兴谈</span>
+              <span class="c-cnt">9 条</span>
+            </a>
+            <a class="cat-item" href="/#categories">
+              <span class="c-name">都市情感</span>
+              <span class="c-desc">夜景、家庭与关系叙事</span>
+              <span class="c-cnt">15 部</span>
+            </a>
+            <a class="cat-item" href="/#categories">
+              <span class="c-name">悬疑短剧</span>
+              <span class="c-desc">单集反转，重看有伏笔</span>
+              <span class="c-cnt">7 部</span>
+            </a>
+            <a class="cat-item" href="/#categories">
+              <span class="c-name">古风剧情</span>
+              <span class="c-desc">服化道投入较高，台词偏文</span>
+              <span class="c-cnt">6 部</span>
+            </a>
+            <a class="cat-item" href="/#categories">
+              <span class="c-name">4K修复</span>
+              <span class="c-desc">早期作品重调色与混音</span>
+              <span class="c-cnt">5 部</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- 5. 深度解析 -->
+        <section class="section" id="deep">
+          <div class="section-head">
+            <h2>深度解析</h2>
+            <span class="sub">短片与系列剧的观看判断</span>
+          </div>
+          <div class="deep">
+            <h3>短片与系列剧，差的不只是时长</h3>
+            <p>单集短片和连载剧集的分野，在结构上比在时长上更明显。以「深夜便利店」为例，它每集换一个顾客视角，第1集是醉客、第2集是学生、第3集是夜班店员，三集之间没有强因果，观众跳着看也不影响理解。系列剧「天台回响」则不同，第2集天台对峙里的一句台词，要接第1集结尾的电话内容才成立，跳过就会断线。</p>
+            <p>这带来一个直接的观看成本差异：短片适合碎片时间，系列剧需要按顺序投入。判断方式很简单——看条目页的集数说明里有没有写「单元」或「连续」。「单元」跳看，「连续」按序。</p>
+            <table class="mini-table">
+              <tr><th>维度</th><th>单元短片</th><th>连续剧集</th></tr>
+              <tr><td>单集时长</td><td>8—15分钟</td><td>18—30分钟</td></tr>
+              <tr><td>剧情依赖</td><td>低，可跳集</td><td>高，需按序</td></tr>
+              <tr><td>更新节奏</td><td>每周2—3条</td><td>每周1集</td></tr>
+              <tr><td>口碑分化</td><td>单集之间差异大</td><td>整体评价更稳</td></tr>
+            </table>
+
+            <h3>「天台回响」4K修复版的三个具体变化</h3>
+            <p>11月7日重发的修复版，改动集中在三处：一是夜景噪点，原版第2集天台段落的暗部颗粒明显，修复后暗部更干净；二是配乐混音，第2集对峙段落的低频被压了一档，人声更清楚；三是片头加了两秒修复说明卡，正片内容没有删改。有观众在评论区说“修复版看着像换了部剧”，这个说法夸张了——分镜、台词、表演都没动，变的只是画质和声音。</p>
+            <p>值得留意的是修复版没有同步放出对比视频，想看前后差异的观众只能靠记忆对照。这一点在传播上吃了亏：对比视频是最容易带动二刷的内容形态，缺了它，修复版的热度基本靠原版口碑撑着。</p>
+
+            <h3>判断一个条目值不值得看，先看三样东西</h3>
+            <p>第一看类型标签是否具体。「都市情感」这种大标签参考价值有限，但「独角戏」「单集反转」「家庭叙事」这类细分标签能直接对应观看偏好。第二看集数说明，单元结构意味着你可以先试一集，连续结构意味着试看成本更高。第三看花絮和访谈有没有同步放出，有花絮的条目通常拍摄过程更完整，成片完成度也相对更稳。</p>
+            <ul>
+              <li>类型标签越细，越容易判断对胃口</li>
+              <li>单元结构适合先试一集，连续结构建议看预告再决定</li>
+              <li>花絮同步放出的条目，现场调度记录更完整</li>
+              <li>修复版优先看画质对比信息，没有对比视频就参考原版评分</li>
+            </ul>
+            <blockquote>「旧信箱」的配音版比原声版晚13天，两位配音演员在读信段落的停顿处理完全不同。原声版停顿长，配音版更连贯。这不是优劣问题，是两种节奏选择。</blockquote>
+
+            <h3>热度榜的分数是怎么构成的</h3>
+            <p>10月26日调整后的热度算法，把播放完成度的权重上调，收藏与追更的计入周期从7天改为10天。这意味着一个条目如果前3分钟留不住人，分数会被明显拉低。以「夜班出租车」为例，它的完成度数据不错，反转点在第9分钟，前段靠车载电台铺信息，能撑住观众不划走；「新人单元·周三场」的第一条短片剪辑偏碎，完成度数据就明显偏弱。</p>
+            <p>算法调整也解释了为什么一些老条目分数回升——10天计入周期覆盖了更多收藏行为。分数变化不等于内容质量变化，这一点在看榜时要有数。</p>
+          </div>
+        </section>
+
+        <!-- 6. 体验指南 -->
+        <section class="section" id="guide">
+          <div class="section-head">
+            <h2>体验指南</h2>
+            <span class="sub">从试看到追更的顺序</span>
+          </div>
+          <div class="guide-grid">
+            <div class="guide-card">
+              <h3><span class="g-num">1</span>先看30秒预告</h3>
+              <p>预告能判断镜头语言和节奏，比类型标签更直观。冷色调夜景、长镜头多的条目，通常偏情绪叙事；快切多、信息密度高的，偏悬疑反转。</p>
+            </div>
+            <div class="guide-card">
+              <h3><span class="g-num">2</span>读一条访谈再决定</h3>
+              <p>演员访谈里会提到拍摄顺序和即兴调整，这些细节能反映成片完成度。「旧信箱」那场哭戏先拍轻的三遍、最后用最收着的一条，这种信息在正片里看不出来。</p>
+            </div>
+            <div class="guide-card">
+              <h3><span class="g-num">3</span>单元结构先试一集</h3>
+              <p>标了「单元」的条目，挑评分最高的一集看，不一定要从第1集开始。标了「连续」的，建议按序，从中间插入容易断线。</p>
+            </div>
+            <div class="guide-card">
+              <h3><span class="g-num">4</span>同类条目横向比较</h3>
+              <p>「深夜便利店」和「夜班出租车」都是夜间场景，前者偏群像切片，后者偏单线反转。同题材下比较结构，比比较评分更有用。</p>
+            </div>
+            <div class="guide-card">
+              <h3><span class="g-num">5</span>修复版优先看对比信息</h3>
+              <p>没有对比视频时，参考原版评分和修复说明卡里提到的改动点。改动集中在画质和混音的，正片体验变化不大；有补拍的另说。</p>
+            </div>
+            <div class="guide-card">
+              <h3><span class="g-num">6</span>花絮作为补充信息</h3>
+              <p>花絮不是必看项，但能补足正片里看不到的调度细节。雨戏布光、走位调整这类内容，对判断制作投入程度有帮助。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 互动栏目 -->
+        <section class="section" id="interact" style="scroll-margin-top:var(--sticky-h);">
+          <div class="interact-bar">
+            <div class="interact-card">
+              <h3>投稿 / 上传作品</h3>
+              <p>新人单元每周三评审，接受8—15分钟短片投稿，题材不限。通过初审的条目会进入新人单元排期。</p>
+              <a class="btn btn-primary" href="/#interact">了解投稿要求</a>
+            </div>
+            <div class="interact-card">
+              <h3>比赛 / 交流</h3>
+              <p>11月主题为「夜与城」，征集以夜间场景为核心的短片，截止11月20日，评审含导演与摄影各一名。</p>
+              <a class="btn btn-primary" href="/#interact">查看比赛细则</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section class="section" id="faq">
+          <div class="section-head">
+            <h2>常见问答</h2>
+            <span class="sub">关于条目与观看的疑问</span>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>「深夜便利店」和「夜班出租车」哪个更适合先看？</summary>
+              <div class="faq-body">
+                <p>两部都是夜间场景的单集叙事，结构不同。「深夜便利店」是单元切片，每集换顾客视角，第3集才切到夜班店员；「夜班出租车」是单线反转，第9分钟出反转点。想看群像的选前者，想看反转的选后者。</p>
+              </div>
+            </details>
+            <details>
+              <summary>4K修复版和原版差别大吗？</summary>
+              <div class="faq-body">
+                <p>「天台回响」修复版的改动集中在三处：夜景噪点减少、第2集对峙段落的低频配乐压了一档、片头加了两秒说明卡。分镜、台词、表演都没动。画质和声音有提升，内容本身没变。</p>
+              </div>
+            </details>
+            <details>
+              <summary>新人单元的三条短片完成度为什么不一样？</summary>
+              <div class="faq-body">
+                <p>10月30日那期三条短片里，考研题材那条完成度最高，夜班出租车题材次之，合租题材那条剪辑偏碎、场景切换太频繁。拍摄周期和后期时间不同，成片差异也就拉开了。</p>
+              </div>
+            </details>
+            <details>
+              <summary>热度榜分数变了，是内容质量变了吗？</summary>
+              <div class="faq-body">
+                <p>不是。10月26日算法调整后，播放完成度权重上调，收藏与追更的计入周期从7天改为10天。分数变化反映的是观看行为的变化，不是条目本身质量的变化。</p>
+              </div>
+            </details>
+            <details>
+              <summary>「旧信箱」配音版和原声版怎么选？</summary>
+              <div class="faq-body">
+                <p>配音版比原声版晚13天上线。原声版读信段落停顿更长，配音版处理得更连贯。喜欢慢节奏情绪铺陈的选原声版，习惯紧凑节奏的选配音版。两个版本都保留，可以对照看。</p>
+              </div>
+            </details>
+            <details>
+              <summary>花絮值得单独看吗？</summary>
+              <div class="faq-body">
+                <p>看你对拍摄过程有没有兴趣。「巷口灯光」的花絮记录了雨戏布光和两次走位调整，正片里看不到这些。如果只想看剧情，花絮可以跳过；想判断制作投入程度，花絮比正片更能说明问题。</p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 8. 用户评论 -->
+        <section class="section" id="comments">
+          <div class="section-head">
+            <h2>用户评论</h2>
+            <span class="sub">来自条目讨论区</span>
+          </div>
+          <div class="comment-wall">
+            <div class="comment">
+              <div class="c-head"><span class="avatar">阿</span><span class="nick">阿栈</span><span class="c-time">11-08</span></div>
+              <p class="c-text">「深夜便利店」第3集那个店员回头看的镜头，我反复看了三遍，还是没懂他到底在看什么。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head"><span class="avatar">青</span><span class="nick">青柠气泡</span><span class="c-time">11-08</span></div>
+              <p class="c-text">修复版天台回响的夜景确实干净了，但第2集对峙的配乐压得有点过，人声清楚了，氛围少了点。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head"><span class="avatar">老</span><span class="nick">老周看片</span><span class="c-time">11-07</span></div>
+              <p class="c-text">夜班出租车二刷才看到司机台词里的伏笔，第3分钟那句“这条路我熟”，第一次看完全没注意。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head"><span class="avatar">半</span><span class="nick">半糖不加冰</span><span class="c-time">11-07</span></div>
+              <p class="c-text">旧信箱的配音版比原声版顺，但读信那段我更喜欢原声版的停顿，配音版太赶了。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head"><span class="avatar">小</span><span class="nick">小满</span><span class="c-time">11-06</span></div>
+              <p class="c-text">巷口灯光的花絮比正片还好看，雨戏淋了四遍，最后用的是第二遍的镜头。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head"><span class="avatar">路</span><span class="nick">路过围观</span><span class="c-time">11-06</span></div>
+              <p class="c-text">新人单元那条合租短片剪得有点碎，场景切得太频繁，看到一半走神了。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head"><span class="avatar">南</span><span class="nick">南风窗</span><span class="c-time">11-05</span></div>
+              <p class="c-text">林晚访谈里说哭戏先拍轻的三遍，最后用最收的一条。这个顺序挺反直觉的，一般不是越拍越重吗。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head"><span class="avatar">一</span><span class="nick">一只猫</span><span class="c-time">11-05</span></div>
+              <p class="c-text">折柳记的服化道确实用心，第二幕庭院调度三组机位，看得出来花了钱。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head"><span class="avatar">冬</span><span class="nick">冬眠中</span><span class="c-time">11-04</span></div>
+              <p class="c-text">热度榜分数这几天变来变去，有点看不懂了。算法调整之后老条目分数反而高了。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head"><span class="avatar">柠</span><span class="nick">柠檬茶</span><span class="c-time">11-04</span></div>
+              <p class="c-text">考研那条短片完成度真的最高，台词写得实在，没有硬凹情绪。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head"><span class="avatar">木</span><span class="nick">木子李</span><span class="c-time">11-03</span></div>
+              <p class="c-text">深夜便利店第2集学生视角那集，结尾太仓促了，感觉还能再铺两分钟。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head"><span class="avatar">大</span><span class="nick">大脸猫</span><span class="c-time">11-03</span></div>
+              <p class="c-text">说真的，天台回响修复版没放对比视频有点可惜，我全靠记忆对比，记不太清了。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head"><span class="avatar">风</span><span class="nick">风铃</span><span class="c-time">11-02</span></div>
+              <p class="c-text">夜班出租车那个反转其实不算新，但前段车载电台铺信息铺得好，撑住了。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head"><span class="avatar">沉</span><span class="nick">沉默的多数</span><span class="c-time">11-01</span></div>
+              <p class="c-text">折柳记台词有点文，看字幕才跟上。不过画面确实好看。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head"><span class="avatar">小</span><span class="nick">小鹿乱撞</span><span class="c-time">10-30</span></div>
+              <p class="c-text">周三场三条短片题材差得有点远，合租考研夜班出租车，凑一期的逻辑是什么？</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9. 相关资讯 -->
+        <section class="section" id="news">
+          <div class="section-head">
+            <h2>相关资讯</h2>
+            <span class="sub">近30天条目动态</span>
+          </div>
+          <div class="news-list">
+            <article class="news-item">
+              <div class="news-thumb"><img src="https://picsum.photos/seed/mdtt091_news1/600/400" width="600" height="400" loading="lazy" alt="深夜便利店第3集更新相关画面"></div>
+              <div class="news-body">
+                <a class="news-title" href="/#news">「深夜便利店」第3集11月8日上线，新增夜班店员视角</a>
+                <p class="news-sum">单集14分钟，片尾30秒预告指向第4集顾客身份，评论区已有角色关系猜测。</p>
+                <div class="news-date">2026-11-08</div>
+              </div>
+            </article>
+            <article class="news-item">
+              <div class="news-thumb"><img src="https://picsum.photos/seed/mdtt091_news2/600/400" width="600" height="400" loading="lazy" alt="天台回响4K修复版重发画面"></div>
+              <div class="news-body">
+                <a class="news-title" href="/#news">天台回响4K修复版11月7日重发，配乐重新混音</a>
+                <p class="news-sum">夜景噪点减少，第2集对峙段落低频压了一档。片头加两秒修复说明卡，正片未删改。</p>
+                <div class="news-date">2026-11-07</div>
+              </div>
+            </article>
+            <article class="news-item">
+              <div class="news-thumb"><img src="https://picsum.photos/seed/mdtt091_news3/600/400" width="600" height="400" loading="lazy" alt="热度榜算法调整相关图表"></div>
+              <div class="news-body">
+                <a class="news-title" href="/#news">热度榜10月26日调整算法，收藏计入周期改为10天</a>
+                <p class="news-sum">播放完成度权重上调，部分老条目分数回升。榜单方未公布具体权重数值。</p>
+                <div class="news-date">2026-10-26</div>
+              </div>
+            </article>
+            <article class="news-item">
+              <div class="news-thumb"><img src="https://picsum.photos/seed/mdtt091_news4/600/400" width="600" height="400" loading="lazy" alt="旧信箱配音版上线画面"></div>
+              <div class="news-body">
+                <a class="news-title" href="/#news">「旧信箱」配音版10月18日上线，晚于原声版13天</a>
+                <p class="news-sum">两位配音演员在读信段落的停顿处理不同，原声版停顿更长，配音版更连贯。</p>
+                <div class="news-date">2026-10-18</div>
+              </div>
+            </article>
+            <article class="news-item">
+              <div class="news-thumb"><img src="https://picsum.photos/seed/mdtt091_news5/600/400" width="600" height="400" loading="lazy" alt="新人单元周三场更新画面"></div>
+              <div class="news-body">
+                <a class="news-title" href="/#news">新人单元周三场10月30日更新三条短片</a>
+                <p class="news-sum">考研题材完成度最高，合租题材剪辑偏碎。下一期排期定在11月5日。</p>
+                <div class="news-date">2026-10-30</div>
+              </div>
+            </article>
+            <article class="news-item">
+              <div class="news-thumb"><img src="https://picsum.photos/seed/mdtt091_news6/600/400" width="600" height="400" loading="lazy" alt="夜班出租车上线画面"></div>
+              <div class="news-body">
+                <a class="news-title" href="/#news">「夜班出租车」11月3日上线，反转点在第9分钟</a>
+                <p class="news-sum">单集结构，前段靠车载电台铺信息。评论区已出现二刷伏笔整理帖。</p>
+                <div class="news-date">2026-11-03</div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 10. 相关推荐 -->
+        <section class="section" id="related">
+          <div class="section-head">
+            <h2>相关推荐</h2>
+            <span class="sub">按内容方向索引</span>
+          </div>
+          <div class="rel-tags">
+            <a href="/#featured">深夜便利店 单元剧</a>
+            <a href="/#featured">天台回响 4K修复</a>
+            <a href="/#featured">旧信箱 独角戏</a>
+            <a href="/#featured">夜班出租车 单集反转</a>
+            <a href="/#featured">巷口灯光 家庭叙事</a>
+            <a href="/#featured">折柳记 古风庭院调度</a>
+            <a href="/#featured">新人单元 考研题材</a>
+            <a href="/#featured">林晚 表演方法访谈</a>
+            <a href="/#featured">都市夜景 冷色调</a>
+            <a href="/#featured">雨戏布光 幕后</a>
+          </div>
+        </section>
+
+        <!-- 11. 补充板块：时间线 + 可信度分层 -->
+        <section class="section" id="extra">
+          <div class="section-head">
+            <h2>条目时间线与信息分层</h2>
+            <span class="sub">近两周关键节点</span>
+          </div>
+          <div class="timeline">
+            <div class="tl-item">
+              <span class="tl-dot"></span>
+              <span class="tl-date">11-08</span>
+              <div class="tl-body">
+                <div class="tl-title">「深夜便利店」第3集上线</div>
+                <div class="tl-desc">单集14分钟，夜班店员视角，片尾30秒预告。属于已公开事实。</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <span class="tl-dot"></span>
+              <span class="tl-date">11-07</span>
+              <div class="tl-body">
+                <div class="tl-title">「天台回响」4K修复版重发</div>
+                <div class="tl-desc">画质与混音调整，片头说明卡。修复方未放出对比视频，差异需对照原版。</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <span class="tl-dot"></span>
+              <span class="tl-date">11-05</span>
+              <div class="tl-body">
+                <div class="tl-title">林晚访谈发布</div>
+                <div class="tl-desc">演员本人表述，属当事人回应层级。哭戏拍摄顺序为访谈中的自述。</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <span class="tl-dot"></span>
+              <span class="tl-date">11-04</span>
+              <div class="tl-body">
+                <div class="tl-title">「旧信箱」全片上线</div>
+                <div class="tl-desc">原声版与配音版同日放出，配音版实际晚13天。属条目更新事实。</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <span class="tl-dot"></span>
+              <span class="tl-date">10-26</span>
+              <div class="tl-body">
+                <div class="tl-title">热度榜算法调整</div>
+                <div class="tl-desc">完成度权重上调，收藏计入周期7天改10天。权重具体数值未公开，媒体报道未覆盖，属未证实细节。</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div><!-- /main-col -->
+
+      <!-- 右辅助栏 -->
+      <aside class="side-col" aria-label="辅助栏">
+
+        <div class="side-panel" id="rank">
+          <h3>本周热度榜</h3>
+          <ul>
+            <li><a href="/#featured"><span class="hot-num">1</span>深夜便利店 第3集</a><div class="sp-meta">热度 9.3 · 11-08更新</div></li>
+            <li><a href="/#featured"><span class="hot-num">2</span>天台回响 4K修复</a><div class="sp-meta">热度 8.9 · 11-07重发</div></li>
+            <li><a href="/#featured"><span class="hot-num">3</span>夜班出租车</a><div class="sp-meta">热度 8.4 · 11-03上线</div></li>
+            <li><a href="/#featured"><span class="hot-num">4</span>旧信箱</a><div class="sp-meta">热度 8.1 · 11-04上线</div></li>
+            <li><a href="/#featured"><span class="hot-num">5</span>折柳记</a><div class="sp-meta">热度 7.9 · 11-02更新</div></li>
+            <li><a href="/#featured"><span class="hot-num">6</span>巷口灯光·花絮</a><div class="sp-meta">热度 7.8 · 11-06上线</div></li>
+          </ul>
+        </div>
+
+        <div class="side-panel">
+          <h3>今日更新条目</h3>
+          <ul>
+            <li><a href="/#updates">深夜便利店 第3集</a><div class="sp-meta">11-08 · 剧情短片</div></li>
+            <li><a href="/#updates">新人单元·周三场 排期确认</a><div class="sp-meta">11-08 · 新人单元</div></li>
+            <li><a href="/#updates">演员访谈·林晚 字幕版</a><div class="sp-meta">11-08 · 访谈</div></li>
+          </ul>
+        </div>
+
+        <div class="side-panel">
+          <h3>分类速览</h3>
+          <ul>
+            <li><a href="/#categories">剧情短片 · 24部</a></li>
+            <li><a href="/#categories">系列剧集 · 18部</a></li>
+            <li><a href="/#categories">幕后花絮 · 11条</a></li>
+            <li><a href="/#categories">演员访谈 · 9条</a></li>
+            <li><a href="/#categories">悬疑短剧 · 7部</a></li>
+            <li><a href="/#categories">4K修复 · 5部</a></li>
+          </ul>
+        </div>
+
+        <div class="side-panel">
+          <h3>互动入口</h3>
+          <ul>
+            <li><a href="/#interact">投稿 / 上传作品</a><div class="sp-meta">新人单元每周三评审</div></li>
+            <li><a href="/#interact">「夜与城」短片比赛</a><div class="sp-meta">截止 11-20</div></li>
+          </ul>
+        </div>
+
+      </aside>
+    </div><!-- /layout -->
+
+    <div class="no-result" id="noResult" role="status" aria-live="polite">没有找到匹配的条目或标签，换个关键词试试。</div>
+
+  </div><!-- /container -->
+</main>
+
+<!-- ============ 页尾 ============ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="fb-logo">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <rect width="100" height="100" rx="22" fill="#8f2d45"/>
+          <circle cx="35" cy="42" r="15" fill="#f7d9a8"/>
+          <circle cx="68" cy="42" r="15" fill="#f7d9a8"/>
+          <path d="M30 70 Q50 88 70 70" stroke="#f7d9a8" stroke-width="7" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span>麻豆天美九幺蜜桃</span>
+      </div>
+      <p>覆盖2026年10月至11月的剧情短片、系列剧集、幕后花絮与演员访谈条目，每周三新人单元固定更新，热度榜按播放完成度加权计算。</p>
+    </div>
+    <div>
+      <h4>内容分类</h4>
+      <ul>
+        <li><a href="/#categories">剧情短片</a></li>
+        <li><a href="/#categories">系列剧集</a></li>
+        <li><a href="/#categories">幕后花絮</a></li>
+        <li><a href="/#categories">演员访谈</a></li>
+        <li><a href="/#categories">4K修复</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>栏目导航</h4>
+      <ul>
+        <li><a href="/#featured">精选推荐</a></li>
+        <li><a href="/#updates">最新更新</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问答</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>互动与说明</h4>
+      <ul>
+        <li><a href="/#interact">投稿 / 上传</a></li>
+        <li><a href="/#interact">比赛 / 交流</a></li>
+        <li><a href="/#comments">用户评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>内容为示例条目聚合，条目名称、评分、热度均为演示数据，不代表真实播出与排名。</span>
+    <span>页面更新于 2026-11-08，对应「深夜便利店 第3集」上线条目。</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ========== 移动端导航 ========== */
+  var hamburger = document.getElementById('hamburger');
+  var mask = document.getElementById('mask');
+  var mobileNav = document.getElementById('mobileNav');
+  var navOpen = false;
+
+  function openNav(){
+    navOpen = true;
+    hamburger.setAttribute('aria-expanded','true');
+    mask.classList.add('show');
+    mobileNav.hidden = false;
+    mobileNav.style.display = 'block';
+    mobileNav.style.position = 'fixed';
+    mobileNav.style.top = '96px';
+    mobileNav.style.left = '0';
+    mobileNav.style.right = '0';
+    mobileNav.style.background = 'var(--panel)';
+    mobileNav.style.borderBottom = '1px solid var(--line)';
+    mobileNav.style.boxShadow = 'var(--shadow-hover)';
+    mobileNav.style.zIndex = '59';
+    mobileNav.style.maxHeight = 'calc(100vh - 110px)';
+    mobileNav.style.overflowY = 'auto';
+    mobileNav.querySelectorAll('a').forEach(function(a){
+      a.style.padding = '10px 8px';
+      a.style.borderRadius = '7px';
+      a.style.fontSize = '14px';
+      a.style.color = 'var(--text-2)';
+      a.addEventListener('click', closeNav);
+    });
+  }
+  function closeNav(){
+    navOpen = false;
+    hamburger.setAttribute('aria-expanded','false');
+    mask.classList.remove('show');
+    mobileNav.hidden = true;
+    mobileNav.style.display = 'none';
+  }
+  if(hamburger){
+    hamburger.addEventListener('click', function(){
+      navOpen ? closeNav() : openNav();
+    });
+  }
+  if(mask){
+    mask.addEventListener('click', closeNav);
+  }
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && navOpen){ closeNav(); }
+  });
+
+  /* ========== 回到顶部 ========== */
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > window.innerHeight * 0.8){
+      toTop.classList.add('show');
+    }else{
+      toTop.classList.remove('show');
+    }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* ========== 搜索筛选 ========== */
+  var searchInput = document.getElementById('searchInput');
+  var searchBtn = document.getElementById('searchBtn');
+  var noResult = document.getElementById('noResult');
+  var searchables = [];
+
+  // 收集可筛选元素：卡片标题/描述/标签、更新列表标题/摘要、分类项、评论、资讯标题/摘要、相关推荐、侧栏条目
+  document.querySelectorAll('.card, .update-list li, .cat-item, .comment, .news-item, .rel-tags a, .side-panel li, .faq details').forEach(function(el){
+    searchables.push({el:el, text:el.textContent.toLowerCase()});
+  });
+
+  function runSearch(){
+    var q = (searchInput.value || '').trim().toLowerCase();
+    if(!q){
+      searchables.forEach(function(s){ s.el.style.display = ''; });
+      noResult.classList.remove('show');
+      return;
+    }
+    var found = 0;
+    searchables.forEach(function(s){
+      if(s.text.indexOf(q) !== -1){
+        s.el.style.display = '';
+        found++;
+      }else{
+        s.el.style.display = 'none';
+      }
+    });
+    if(found === 0){
+      noResult.classList.add('show');
+    }else{
+      noResult.classList.remove('show');
+    }
+  }
+  if(searchBtn){
+    searchBtn.addEventListener('click', runSearch);
+  }
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ runSearch(); }
+    });
+    searchInput.addEventListener('input', function(){
+      if(!searchInput.value.trim()){ runSearch(); }
+    });
+  }
+
+  /* ========== 频道/导航当前高亮 ========== */
+  var sections = document.querySelectorAll('section.section[id]');
+  var navLinks = document.querySelectorAll('.main-nav a, .channel-col ul li a');
+  function setActive(){
+    var scrollY = window.scrollY + 120;
+    var currentId = '';
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= scrollY){ currentId = sec.id; }
+    });
+    navLinks.forEach(function(a){
+      a.classList.remove('active');
+      if(currentId && a.getAttribute('href') === '/#' + currentId){
+        a.classList.add('active');
+      }
+    });
+  }
+  window.addEventListener('scroll', setActive, {passive:true});
+  setActive();
+
+})();
+</script>
+
+<!-- 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "麻豆天美九幺蜜桃",
+  "description": "麻豆天美九幺蜜桃内容聚合页，汇总热播作品条目、分类索引、榜单与用户评论，按日期更新，适合想快速了解近期热门作品与分类导航的观众浏览。",
+  "inLanguage": "zh-CN",
+  "dateModified": "2026-11-08"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "「深夜便利店」和「夜班出租车」哪个更适合先看？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "两部都是夜间场景的单集叙事，结构不同。「深夜便利店」是单元切片，每集换顾客视角，第3集才切到夜班店员；「夜班出租车」是单线反转，第9分钟出反转点。想看群像的选前者，想看反转的选后者。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "4K修复版和原版差别大吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「天台回响」修复版的改动集中在三处：夜景噪点减少、第2集对峙段落的低频配乐压了一档、片头加了两秒说明卡。分镜、台词、表演都没动。画质和声音有提升，内容本身没变。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "新人单元的三条短片完成度为什么不一样？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10月30日那期三条短片里，考研题材那条完成度最高，夜班出租车题材次之，合租题材那条剪辑偏碎、场景切换太频繁。拍摄周期和后期时间不同，成片差异也就拉开了。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "热度榜分数变了，是内容质量变了吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不是。10月26日算法调整后，播放完成度权重上调，收藏与追更的计入周期从7天改为10天。分数变化反映的是观看行为的变化，不是条目本身质量的变化。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "「旧信箱」配音版和原声版怎么选？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "配音版比原声版晚13天上线。原声版读信段落停顿更长，配音版处理得更连贯。喜欢慢节奏情绪铺陈的选原声版，习惯紧凑节奏的选配音版。两个版本都保留，可以对照看。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "花絮值得单独看吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "看你对拍摄过程有没有兴趣。「巷口灯光」的花絮记录了雨戏布光和两次走位调整，正片里看不到这些。如果只想看剧情，花絮可以跳过；想判断制作投入程度，花絮比正片更能说明问题。"
+      }
+    }
+  ]
+}
+</script>
+</body>
+  </html>
